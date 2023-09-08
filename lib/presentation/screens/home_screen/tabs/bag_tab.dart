@@ -42,7 +42,7 @@ class BagTab extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                           const  Text(
+                            const Text(
                               'Grand Total',
                               style: kBoldBlackTextStyle,
                             ),
@@ -50,11 +50,65 @@ class BagTab extends StatelessWidget {
                           ],
                         ),
                         kHeightTen,
-                       const  Text(
+                        const Text(
                           'There might be a change in the final bill which will be generated from the shop',
                           style: TextStyle(
                               fontSize: 12,
                               color: Color.fromARGB(255, 59, 59, 59)),
+                        ),
+                        kHeightTen,
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 15),
+                              child: CircleAvatar(),
+                            ),
+                            SizedBox(
+                              width: size.width * 0.55,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Orange'),
+                                  Text('23'),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text('1kg'),
+                                      SizedBox(
+                                        width: size.width * 0.2,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Container(
+                                              height: 25,
+                                              width: 25,
+                                              decoration: BoxDecoration(
+                                                color: customPrimaryColor,
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                            ),
+                                            Text('1'),
+                                            Container(
+                                              height: 25,
+                                              width: 25,
+                                              decoration: BoxDecoration(
+                                                color: customPrimaryColor,
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
