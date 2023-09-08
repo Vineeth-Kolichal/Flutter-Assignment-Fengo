@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/presentation/routes/app_route_generate.dart';
-import 'package:flutter_assignment_fengo/presentation/screens/success_screen/success_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main(List<String> args) {
@@ -18,6 +17,7 @@ class ZappyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+          scaffoldBackgroundColor: Color.fromARGB(255, 248, 248, 245),
           primarySwatch: customPrimaryColor,
           fontFamily: GoogleFonts.poppins().fontFamily),
       debugShowCheckedModeBanner: false,
