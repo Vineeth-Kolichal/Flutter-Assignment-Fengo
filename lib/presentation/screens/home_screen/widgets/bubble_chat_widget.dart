@@ -78,7 +78,7 @@ class BubbleSpecialOne extends StatelessWidget {
           child: Container(
             constraints: constraints ??
                 BoxConstraints(
-                  maxWidth: MediaQuery.of(context).size.width * .77,
+                  maxWidth: MediaQuery.of(context).size.width * .7,
                 ),
             margin: isSender
                 ? stateTick

@@ -17,10 +17,10 @@ class HomeScreen extends StatelessWidget {
       initialIndex: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Image.asset(
-            'assets/images/zappy_logo.png',
-            height: 45,
-          ),
+          // title: Image.asset(
+          //   'assets/images/zappy_logo.png',
+          //   height: 45,
+          // ),
           bottom: const TabBar(tabs: [
             CustomTaHeadbWidget(
               icon: Iconsax.shop,
