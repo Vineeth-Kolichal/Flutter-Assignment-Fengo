@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
+import 'package:flutter_assignment_fengo/business_logic/cubits/cubit/coupon_cubit.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/data/data_providers/cart_data_provider/cart_data_provider.dart';
 import 'package:flutter_assignment_fengo/presentation/routes/app_route_generate.dart';
@@ -27,11 +28,14 @@ class ZappyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (ctx) => BagTabBloc(),
-        )
+        ),
+        BlocProvider(
+          create: (ctx) => CouponCubit(),
+        ),
       ],
       child: MaterialApp(
         theme: ThemeData(
-            scaffoldBackgroundColor: Color.fromARGB(255, 233, 233, 231),
+            scaffoldBackgroundColor: const Color.fromARGB(255, 233, 233, 231),
             primarySwatch: customPrimaryColor,
             fontFamily: GoogleFonts.poppins().fontFamily),
         debugShowCheckedModeBanner: false,

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
+import 'package:flutter_assignment_fengo/business_logic/cubits/cubit/coupon_cubit.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
+import 'package:flutter_assignment_fengo/data/models/coupon_model.dart';
+import 'package:flutter_assignment_fengo/presentation/screens/home_screen/tabs/bag_tab.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bubble_chat_widget.dart';
 import 'package:flutter_assignment_fengo/presentation/widgets/custom_elevated_button.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,8 +26,7 @@ class CouponChatSection extends StatelessWidget {
         if (amount <= 0) {
           return Column(
             children: [
-              const BubbleSpecialOne(
-                color: whiteBackgroundColor,
+              const ChatBubble(
                 isSender: false,
                 content: Row(
                   children: [
@@ -48,41 +51,52 @@ class CouponChatSection extends StatelessWidget {
                   ],
                 ),
               ),
-              Visibility(
-                visible: !isCouponApplied,
-                child: BubbleSpecialOne(
-                  isSender: false,
-                  color: transparent,
-                  content: CustomElevatedButton(
-                    labelText: "Continue without applying",
-                    backgroundColor: whiteBackgroundColor,
-                    fontColor: customPrimaryColor,
-                    onPressed: () {},
-                  ),
-                ),
-              ),
-              Visibility(
-                visible: !isCouponApplied,
-                child: BubbleSpecialOne(
-                  isSender: false,
-                  color: transparent,
-                  content: CustomElevatedButton(
-                    labelText: "Apply coupon",
-                    backgroundColor: customPrimaryColor,
-                    fontColor: textWhiteColor,
-                    onPressed: () {
-                      couponGridDialoge(context, size);
-                    },
-                  ),
-                ),
+              BlocSelector<BagTabBloc, BagTabState, double?>(
+                selector: (state) {
+                  return state.couponValue;
+                },
+                builder: (context, couponValue) {
+                  return Column(
+                    children: [
+                      Visibility(
+                        visible: couponValue == null,
+                        child: ChatBubble(
+                          isSender: false,
+                          isTransparant: true,
+                          content: CustomElevatedButton(
+                            labelText: "Continue without applying",
+                            backgroundColor: whiteBackgroundColor,
+                            fontColor: customPrimaryColor,
+                            onPressed: () {},
+                          ),
+                        ),
+                      ),
+                      Visibility(
+                        visible: couponValue == null,
+                        child: ChatBubble(
+                          isSender: false,
+                          isTransparant: true,
+                          content: CustomElevatedButton(
+                            labelText: "Apply coupon",
+                            backgroundColor: customPrimaryColor,
+                            fontColor: textWhiteColor,
+                            onPressed: () {
+                              context.read<CouponCubit>().getCoupons();
+                              couponGridDialoge(context, size);
+                            },
+                          ),
+                        ),
+                      )
+                    ],
+                  );
+                },
               )
             ],
           );
         }
         return Column(
           children: [
-            BubbleSpecialOne(
-              color: whiteBackgroundColor,
+            ChatBubble(
               isSender: false,
               content: RichText(
                 text: TextSpan(
@@ -97,9 +111,9 @@ class CouponChatSection extends StatelessWidget {
                 ),
               ),
             ),
-            BubbleSpecialOne(
+            ChatBubble(
               isSender: false,
-              color: transparent,
+              isTransparant: true,
               content: CustomElevatedButton(
                 labelText: 'Proceed',
                 backgroundColor: customPrimaryColor,
@@ -159,26 +173,36 @@ class CouponChatSection extends StatelessWidget {
                       SizedBox(
                         height: size.width,
                         width: size.width * 0.7,
-                        child: GridView.count(
-                            crossAxisCount: 3,
-                            crossAxisSpacing: 8.0,
-                            mainAxisSpacing: 8.0,
-                            children: List.generate(10, (index) {
-                              return InkWell(
-                                onTap: () {
-                                  Navigator.of(ctx).pop();
-                                  applyCoupon(context, size);
-                                },
-                                child: Center(
-                                    child: Card(
-                                  child: Container(
-                                    padding: EdgeInsets.all(5),
-                                    child:
-                                        Image.asset('assets/images/coupon.png'),
-                                  ),
-                                )),
-                              );
-                            })),
+                        child: BlocBuilder<CouponCubit, CouponState>(
+                          builder: (context, state) {
+                            return GridView.count(
+                              crossAxisCount: 3,
+                              crossAxisSpacing: 8.0,
+                              mainAxisSpacing: 8.0,
+                              children:
+                                  List.generate(state.coupons.length, (index) {
+                                return InkWell(
+                                  onTap: () {
+                                    Navigator.of(ctx).pop();
+                                    context.read<BagTabBloc>().add(ApplyCoupon(
+                                        amount: state.coupons[index].amount));
+
+                                    applyCoupon(
+                                        context, size, state.coupons[index]);
+                                  },
+                                  child: Center(
+                                      child: Card(
+                                    child: Container(
+                                      padding: const EdgeInsets.all(5),
+                                      child: Image.asset(
+                                          'assets/images/coupon.png'),
+                                    ),
+                                  )),
+                                );
+                              }),
+                            );
+                          },
+                        ),
                       )
                     ],
                   ),
@@ -199,7 +223,8 @@ class CouponChatSection extends StatelessWidget {
     );
   }
 
-  Future<dynamic> applyCoupon(BuildContext context, Size size) {
+  Future<dynamic> applyCoupon(
+      BuildContext context, Size size, CouponModel couponModel) {
     return showDialog(
       barrierDismissible: false,
       context: context,
@@ -214,7 +239,7 @@ class CouponChatSection extends StatelessWidget {
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 'Coupon Applied!',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
               ),
@@ -227,7 +252,7 @@ class CouponChatSection extends StatelessWidget {
               const Text("Congratulations, you've saved"),
               kHeightTen,
               Text(
-                '₹9',
+                '₹ ${couponModel.amount}',
                 style: const TextStyle(
                     color: customPrimaryColor,
                     fontSize: 25,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
@@ -26,7 +25,7 @@ class CartChatWidget extends StatelessWidget {
         for (var x in state.cartItems.keys) {
           cartProduct.add(x);
         }
-        return BubbleSpecialOne(
+        return ChatBubble(
           content: Theme(
             data: Theme.of(context).copyWith(dividerColor: transparent),
             child: ExpansionTile(
@@ -97,7 +96,6 @@ class CartChatWidget extends StatelessWidget {
               ],
             ),
           ),
-          color: const Color(0xFFE4FFE6),
           tail: true,
           textStyle: const TextStyle(color: Colors.black, fontSize: 16),
         );

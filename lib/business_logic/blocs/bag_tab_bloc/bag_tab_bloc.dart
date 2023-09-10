@@ -8,8 +8,9 @@ part 'bag_tab_bloc.freezed.dart';
 
 class BagTabBloc extends Bloc<BagTabEvent, BagTabState> {
   BagTabBloc() : super(BagTabState.initial()) {
-    on<BagTabEvent>((event, emit) {
-      // TODO: implement event handler
+    on<ApplyCoupon>((event, emit) {
+      print(event.amount);
+      emit(state.copyWith(couponValue: event.amount));
     });
   }
 }

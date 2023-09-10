@@ -16,37 +16,42 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$BagTabEvent {
+  double get amount => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(double amount) applyCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(double amount)? applyCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(double amount)? applyCoupon,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(ApplyCoupon value) applyCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(ApplyCoupon value)? applyCoupon,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $BagTabEventCopyWith<BagTabEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -55,6 +60,8 @@ abstract class $BagTabEventCopyWith<$Res> {
   factory $BagTabEventCopyWith(
           BagTabEvent value, $Res Function(BagTabEvent) then) =
       _$BagTabEventCopyWithImpl<$Res, BagTabEvent>;
+  @useResult
+  $Res call({double amount});
 }
 
 /// @nodoc
@@ -66,66 +73,108 @@ class _$BagTabEventCopyWithImpl<$Res, $Val extends BagTabEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? amount = null,
+  }) {
+    return _then(_value.copyWith(
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$ApplyCouponCopyWith<$Res>
+    implements $BagTabEventCopyWith<$Res> {
+  factory _$$ApplyCouponCopyWith(
+          _$ApplyCoupon value, $Res Function(_$ApplyCoupon) then) =
+      __$$ApplyCouponCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double amount});
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$BagTabEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$ApplyCouponCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$ApplyCoupon>
+    implements _$$ApplyCouponCopyWith<$Res> {
+  __$$ApplyCouponCopyWithImpl(
+      _$ApplyCoupon _value, $Res Function(_$ApplyCoupon) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? amount = null,
+  }) {
+    return _then(_$ApplyCoupon(
+      amount: null == amount
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$ApplyCoupon implements ApplyCoupon {
+  const _$ApplyCoupon({required this.amount});
+
+  @override
+  final double amount;
 
   @override
   String toString() {
-    return 'BagTabEvent.started()';
+    return 'BagTabEvent.applyCoupon(amount: $amount)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType &&
+            other is _$ApplyCoupon &&
+            (identical(other.amount, amount) || other.amount == amount));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, amount);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ApplyCouponCopyWith<_$ApplyCoupon> get copyWith =>
+      __$$ApplyCouponCopyWithImpl<_$ApplyCoupon>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(double amount) applyCoupon,
   }) {
-    return started();
+    return applyCoupon(amount);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(double amount)? applyCoupon,
   }) {
-    return started?.call();
+    return applyCoupon?.call(amount);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(double amount)? applyCoupon,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (applyCoupon != null) {
+      return applyCoupon(amount);
     }
     return orElse();
   }
@@ -133,39 +182,46 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(ApplyCoupon value) applyCoupon,
   }) {
-    return started(this);
+    return applyCoupon(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
   }) {
-    return started?.call(this);
+    return applyCoupon?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(ApplyCoupon value)? applyCoupon,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (applyCoupon != null) {
+      return applyCoupon(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements BagTabEvent {
-  const factory _Started() = _$_Started;
+abstract class ApplyCoupon implements BagTabEvent {
+  const factory ApplyCoupon({required final double amount}) = _$ApplyCoupon;
+
+  @override
+  double get amount;
+  @override
+  @JsonKey(ignore: true)
+  _$$ApplyCouponCopyWith<_$ApplyCoupon> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 mixin _$BagTabState {
-  List<Widget> get chatWidgetList => throw _privateConstructorUsedError;
+  double? get couponValue => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $BagTabStateCopyWith<BagTabState> get copyWith =>
@@ -178,7 +234,7 @@ abstract class $BagTabStateCopyWith<$Res> {
           BagTabState value, $Res Function(BagTabState) then) =
       _$BagTabStateCopyWithImpl<$Res, BagTabState>;
   @useResult
-  $Res call({List<Widget> chatWidgetList});
+  $Res call({double? couponValue});
 }
 
 /// @nodoc
@@ -194,13 +250,13 @@ class _$BagTabStateCopyWithImpl<$Res, $Val extends BagTabState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? chatWidgetList = null,
+    Object? couponValue = freezed,
   }) {
     return _then(_value.copyWith(
-      chatWidgetList: null == chatWidgetList
-          ? _value.chatWidgetList
-          : chatWidgetList // ignore: cast_nullable_to_non_nullable
-              as List<Widget>,
+      couponValue: freezed == couponValue
+          ? _value.couponValue
+          : couponValue // ignore: cast_nullable_to_non_nullable
+              as double?,
     ) as $Val);
   }
 }
@@ -212,7 +268,7 @@ abstract class _$$_InitialCopyWith<$Res> implements $BagTabStateCopyWith<$Res> {
       __$$_InitialCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Widget> chatWidgetList});
+  $Res call({double? couponValue});
 }
 
 /// @nodoc
@@ -225,13 +281,13 @@ class __$$_InitialCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? chatWidgetList = null,
+    Object? couponValue = freezed,
   }) {
     return _then(_$_Initial(
-      chatWidgetList: null == chatWidgetList
-          ? _value._chatWidgetList
-          : chatWidgetList // ignore: cast_nullable_to_non_nullable
-              as List<Widget>,
+      couponValue: freezed == couponValue
+          ? _value.couponValue
+          : couponValue // ignore: cast_nullable_to_non_nullable
+              as double?,
     ));
   }
 }
@@ -239,20 +295,14 @@ class __$$_InitialCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Initial implements _Initial {
-  const _$_Initial({required final List<Widget> chatWidgetList})
-      : _chatWidgetList = chatWidgetList;
+  const _$_Initial({required this.couponValue});
 
-  final List<Widget> _chatWidgetList;
   @override
-  List<Widget> get chatWidgetList {
-    if (_chatWidgetList is EqualUnmodifiableListView) return _chatWidgetList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_chatWidgetList);
-  }
+  final double? couponValue;
 
   @override
   String toString() {
-    return 'BagTabState(chatWidgetList: $chatWidgetList)';
+    return 'BagTabState(couponValue: $couponValue)';
   }
 
   @override
@@ -260,13 +310,12 @@ class _$_Initial implements _Initial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Initial &&
-            const DeepCollectionEquality()
-                .equals(other._chatWidgetList, _chatWidgetList));
+            (identical(other.couponValue, couponValue) ||
+                other.couponValue == couponValue));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_chatWidgetList));
+  int get hashCode => Object.hash(runtimeType, couponValue);
 
   @JsonKey(ignore: true)
   @override
@@ -276,11 +325,10 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements BagTabState {
-  const factory _Initial({required final List<Widget> chatWidgetList}) =
-      _$_Initial;
+  const factory _Initial({required final double? couponValue}) = _$_Initial;
 
   @override
-  List<Widget> get chatWidgetList;
+  double? get couponValue;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

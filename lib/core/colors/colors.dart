@@ -7,6 +7,7 @@ const greenbackgroundColor = Color(0xFF00925E);
 const greenFontColor = Color(0xFF00925E);
 const whiteBackgroundColor = Colors.white;
 const transparent = Colors.transparent;
+const senderChatColor =  Color(0xFFE4FFE6);
 const MaterialColor customPrimaryColor = MaterialColor(0xFF00925E, <int, Color>{
   50: Color(0xFFE0F2EC),
   100: Color(0xFFB3DECF),

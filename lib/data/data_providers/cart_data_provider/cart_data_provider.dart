@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter_assignment_fengo/data/data_providers/produts.dart';
 import 'package:flutter_assignment_fengo/data/models/product_model.dart';

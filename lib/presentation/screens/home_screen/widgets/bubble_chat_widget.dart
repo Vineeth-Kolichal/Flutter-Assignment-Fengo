@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 
 ///WhatsApp's chat bubble type
 ///
@@ -9,23 +10,22 @@ import 'package:flutter/material.dart';
 ///message sender can be changed using [isSender]
 ///chat bubble [TextStyle] can be customized using [textStyle]
 
-class BubbleSpecialOne extends StatelessWidget {
+class ChatBubble extends StatelessWidget {
   final bool isSender;
   final Widget content;
   final bool tail;
-  final Color color;
   final bool sent;
   final bool delivered;
   final bool seen;
   final TextStyle textStyle;
   final BoxConstraints? constraints;
+  final bool isTransparant;
 
-  const BubbleSpecialOne({
+  const ChatBubble({
     Key? key,
     this.isSender = true,
     this.constraints,
     required this.content,
-    this.color = Colors.white70,
     this.tail = true,
     this.sent = false,
     this.delivered = false,
@@ -34,6 +34,7 @@ class BubbleSpecialOne extends StatelessWidget {
       color: Colors.black87,
       fontSize: 16,
     ),
+    this.isTransparant = false,
   }) : super(key: key);
 
   ///chat bubble builder method
@@ -72,7 +73,11 @@ class BubbleSpecialOne extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
         child: CustomPaint(
           painter: SpecialChatBubbleOne(
-              color: color,
+              color: isTransparant
+                  ? transparent
+                  : isSender
+                      ? senderChatColor
+                      : whiteBackgroundColor,
               alignment: isSender ? Alignment.topRight : Alignment.topLeft,
               tail: tail),
           child: Container(
