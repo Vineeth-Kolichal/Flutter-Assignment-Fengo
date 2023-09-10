@@ -14,7 +14,6 @@ class CartChatWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       context.read<CartBloc>().add(const GetAllCart());
     });

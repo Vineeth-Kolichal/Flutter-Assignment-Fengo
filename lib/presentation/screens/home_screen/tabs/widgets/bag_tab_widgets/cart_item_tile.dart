@@ -23,7 +23,6 @@ class CartItemTile extends StatelessWidget {
   final int id;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
 
     return Row(
       children: [

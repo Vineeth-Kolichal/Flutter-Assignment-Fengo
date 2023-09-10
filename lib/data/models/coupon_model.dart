@@ -4,8 +4,8 @@ class Coupons {
   Coupons({required this.couponList});
   factory Coupons.fromJson(Map<String, dynamic> json) {
     List<CouponModel> couponList = [];
-    json['couponList'].forEach((v) {
-      couponList.add(CouponModel.fromJson(v));
+    json['couponList'].forEach((couponModelJson) {
+      couponList.add(CouponModel.fromJson(couponModelJson));
     });
 
     return Coupons(couponList: couponList);

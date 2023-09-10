@@ -4,8 +4,8 @@ class Products {
   Products({required this.products});
   factory Products.fromJson(Map<String, dynamic> json) {
     List<ProductModel> products = <ProductModel>[];
-    json['Products'].forEach((v) {
-      products.add(ProductModel.fromJson(v));
+    json['Products'].forEach((productModelJson) {
+      products.add(ProductModel.fromJson(productModelJson));
     });
     return Products(products: products);
   }

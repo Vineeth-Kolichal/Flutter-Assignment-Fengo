@@ -21,3 +21,9 @@ const kHeightTwenty = SizedBox(
 );
 const kBoldBlackTextStyle =
     TextStyle(color: Colors.black, fontWeight: FontWeight.w600);
+
+enum DeliveryMethod { homeDelivery, takeDelivery }
+
+enum TimeSlot{
+  time1,
+}

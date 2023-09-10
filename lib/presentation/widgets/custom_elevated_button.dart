@@ -12,6 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.height = 40,
     this.prefixIcon,
     this.borderColor = customPrimaryColor,
+    this.labelTextFontSize,
   });
   final String labelText;
   final Color backgroundColor;
@@ -21,7 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
   final double height;
   final Widget? prefixIcon;
   final Color? borderColor;
-
+  final double? labelTextFontSize;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -50,7 +51,11 @@ class CustomElevatedButton extends StatelessWidget {
                 : const SizedBox.shrink(),
             Text(
               labelText,
-              style: TextStyle(color: fontColor, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                color: fontColor,
+                fontWeight: FontWeight.w700,
+                fontSize: labelTextFontSize,
+              ),
             ),
           ],
         ),

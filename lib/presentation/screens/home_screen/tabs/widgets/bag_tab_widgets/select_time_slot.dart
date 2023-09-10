@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bubble_chat_widget.dart';
@@ -42,6 +41,7 @@ class SelectTimeSlot extends StatelessWidget {
                     mainAxisSpacing: 8.0,
                     children: List.generate(3, (index) {
                       return CustomElevatedButton(
+                        labelTextFontSize: 12,
                         borderColor: transparent,
                         width: null,
                         labelText: '10 am to 12 pm',

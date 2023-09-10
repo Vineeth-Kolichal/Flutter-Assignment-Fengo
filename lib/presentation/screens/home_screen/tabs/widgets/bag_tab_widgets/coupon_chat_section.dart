@@ -5,7 +5,6 @@ import 'package:flutter_assignment_fengo/business_logic/cubits/cubit/coupon_cubi
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
 import 'package:flutter_assignment_fengo/data/models/coupon_model.dart';
-import 'package:flutter_assignment_fengo/presentation/screens/home_screen/tabs/bag_tab.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bubble_chat_widget.dart';
 import 'package:flutter_assignment_fengo/presentation/widgets/custom_elevated_button.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -51,15 +50,17 @@ class CouponChatSection extends StatelessWidget {
                   ],
                 ),
               ),
-              BlocSelector<BagTabBloc, BagTabState, double?>(
+              BlocSelector<BagTabBloc, BagTabState, bool>(
                 selector: (state) {
-                  return state.couponValue;
+                  bool visible =
+                      (state.couponValue == null) && !state.withoutCoupon;
+                  return visible;
                 },
-                builder: (context, couponValue) {
+                builder: (context, visible) {
                   return Column(
                     children: [
                       Visibility(
-                        visible: couponValue == null,
+                        visible: visible,
                         child: ChatBubble(
                           isSender: false,
                           isTransparant: true,
@@ -67,12 +68,16 @@ class CouponChatSection extends StatelessWidget {
                             labelText: "Continue without applying",
                             backgroundColor: whiteBackgroundColor,
                             fontColor: customPrimaryColor,
-                            onPressed: () {},
+                            onPressed: () {
+                              context
+                                  .read<BagTabBloc>()
+                                  .add(const WithoutCoupon());
+                            },
                           ),
                         ),
                       ),
                       Visibility(
-                        visible: couponValue == null,
+                        visible: visible,
                         child: ChatBubble(
                           isSender: false,
                           isTransparant: true,
@@ -111,15 +116,27 @@ class CouponChatSection extends StatelessWidget {
                 ),
               ),
             ),
-            ChatBubble(
-              isSender: false,
-              isTransparant: true,
-              content: CustomElevatedButton(
-                labelText: 'Proceed',
-                backgroundColor: customPrimaryColor,
-                fontColor: textWhiteColor,
-                onPressed: () {},
-              ),
+            BlocSelector<BagTabBloc, BagTabState, bool>(
+              selector: (state) {
+                return !state.withoutCoupon;
+              },
+              builder: (context, visible) {
+                return Visibility(
+                  visible: visible,
+                  child: ChatBubble(
+                    isSender: false,
+                    isTransparant: true,
+                    content: CustomElevatedButton(
+                      labelText: 'Proceed',
+                      backgroundColor: customPrimaryColor,
+                      fontColor: textWhiteColor,
+                      onPressed: () {
+                        context.read<BagTabBloc>().add(const WithoutCoupon());
+                      },
+                    ),
+                  ),
+                );
+              },
             )
           ],
         );
@@ -215,7 +232,10 @@ class CouponChatSection extends StatelessWidget {
               labelText: 'Continue without applying',
               backgroundColor: whiteBackgroundColor,
               fontColor: customPrimaryColor,
-              onPressed: () {},
+              onPressed: () {
+                context.read<BagTabBloc>().add(const WithoutCoupon());
+                Navigator.of(ctx).pop();
+              },
             )
           ],
         );
