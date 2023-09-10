@@ -10,6 +10,8 @@ class CustomElevatedButton extends StatelessWidget {
     this.width = 1,
     required this.onPressed,
     this.height = 40,
+    this.prefixIcon,
+    this.borderColor = customPrimaryColor,
   });
   final String labelText;
   final Color backgroundColor;
@@ -17,6 +19,8 @@ class CustomElevatedButton extends StatelessWidget {
   final double width;
   final Function()? onPressed;
   final double height;
+  final Widget? prefixIcon;
+  final Color? borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,17 +32,28 @@ class CustomElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             backgroundColor: backgroundColor,
             shape: RoundedRectangleBorder(
-                side: const BorderSide(
+                side: BorderSide(
                   width: 1,
-                  color: customPrimaryColor,
+                  color: borderColor ?? transparent,
                 ),
                 borderRadius: BorderRadius.circular(20))),
         onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            labelText,
-            style: TextStyle(color: fontColor, fontWeight: FontWeight.w700),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              prefixIcon ?? const SizedBox.shrink(),
+              prefixIcon != null
+                  ? const SizedBox(
+                      width: 5,
+                    )
+                  : const SizedBox.shrink(),
+              Text(
+                labelText,
+                style: TextStyle(color: fontColor, fontWeight: FontWeight.w700),
+              ),
+            ],
           ),
         ),
       ),

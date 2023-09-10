@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 const yellowColor = Colors.yellow;
 const textBlackColor = Colors.black;
-const kWhiteTextColor = Colors.white;
+const textWhiteColor = Colors.white;
 const greenbackgroundColor = Color(0xFF00925E);
-const greenFontColor= Color(0xFF00925E);
- const MaterialColor customPrimaryColor = MaterialColor(0xFF00925E, <int, Color>{
+const greenFontColor = Color(0xFF00925E);
+const whiteBackgroundColor = Colors.white;
+const transparent = Colors.transparent;
+const MaterialColor customPrimaryColor = MaterialColor(0xFF00925E, <int, Color>{
   50: Color(0xFFE0F2EC),
   100: Color(0xFFB3DECF),
   200: Color(0xFF80C9AF),

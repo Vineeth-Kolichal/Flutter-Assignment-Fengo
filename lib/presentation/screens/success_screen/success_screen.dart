@@ -21,7 +21,7 @@ class SuccessScreen extends StatelessWidget {
               'HOORAY!!',
               style: TextStyle(
                   fontSize: 27,
-                  color: kWhiteTextColor,
+                  color: textWhiteColor,
                   fontWeight: FontWeight.w600),
             ),
             LottieBuilder.asset(
@@ -31,7 +31,7 @@ class SuccessScreen extends StatelessWidget {
             const Text(
               'Your order has been\n placed successfully',
               textAlign: TextAlign.center,
-              style: TextStyle(color: kWhiteTextColor, fontSize: 17),
+              style: TextStyle(color: textWhiteColor, fontSize: 17),
             ),
             const SizedBox(height: 25),
             CustomElevatedButton(
