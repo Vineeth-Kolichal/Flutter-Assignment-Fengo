@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
+import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
 import 'package:flutter_assignment_fengo/data/models/product_model.dart';
@@ -15,10 +15,10 @@ class CartChatWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      context.read<CartBloc>().add(const GetAllCart());
+      context.read<BagTabBloc>().add(const GetAllCartItems());
     });
 
-    return BlocBuilder<CartBloc, CartState>(
+    return BlocBuilder<BagTabBloc, BagTabState>(
       builder: (context, state) {
         List<ProductModel> cartProduct = [];
         for (var x in state.cartItems.keys) {

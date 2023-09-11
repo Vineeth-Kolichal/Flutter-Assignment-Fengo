@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
+import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/tabs/widgets/bag_tab_widgets/mini_button_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -68,7 +68,7 @@ class CartItemTile extends StatelessWidget {
                           isDeleteButton: count <= 1,
                           onPressed: () {
                             if (count > 1) {
-                              context.read<CartBloc>().add(Remove(id));
+                              context.read<BagTabBloc>().add(ItemCountDecrement(id));
                             }
                           },
                           icon: Icons.remove,
@@ -76,7 +76,7 @@ class CartItemTile extends StatelessWidget {
                         Text('$count'),
                         MiniButtonWidget(
                           onPressed: () {
-                            context.read<CartBloc>().add(Add(id));
+                            context.read<BagTabBloc>().add(ItemCountIncrement(id));
                           },
                           icon: Icons.add,
                         )

@@ -13,13 +13,17 @@ class CouponAppliedChatWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return BlocSelector<BagTabBloc, BagTabState, double?>(
+    return BlocSelector<BagTabBloc, BagTabState, double>(
       selector: (state) {
-        return state.couponValue;
+        if (state.couponValue != null) {
+          return state.couponValue!;
+        } else {
+          return 0.0;
+        }
       },
       builder: (context, state) {
         return Visibility(
-          visible: state != null,
+          visible: state != 0.0,
           child: ChatBubble(
             content: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

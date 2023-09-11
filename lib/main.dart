@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
-import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_assignment_fengo/business_logic/cubits/cubit/coupon_cubit.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/data/data_providers/cart_data_provider/cart_data_provider.dart';
@@ -23,9 +22,6 @@ class ZappyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (ctx) => CartBloc(),
-        ),
         BlocProvider(
           create: (ctx) => BagTabBloc(),
         ),

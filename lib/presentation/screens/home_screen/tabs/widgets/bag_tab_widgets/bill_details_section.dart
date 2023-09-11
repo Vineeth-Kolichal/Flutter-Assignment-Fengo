@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
-import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bold_text.dart';
@@ -10,13 +9,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class BillDetailsSectionChat extends StatelessWidget {
   const BillDetailsSectionChat({
     super.key,
-    required this.visible,
   });
-  final bool visible;
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: visible,
+      visible: false,
       child: ChatBubble(
           isSender: false,
           content: Padding(
@@ -33,7 +30,7 @@ class BillDetailsSectionChat extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const BoldText('ItemTotal'),
-                    BlocBuilder<CartBloc, CartState>(
+                    BlocBuilder<BagTabBloc, BagTabState>(
                       builder: (context, state) {
                         return BoldText('₹ ${state.total}');
                       },
@@ -79,7 +76,7 @@ class BillDetailsSectionChat extends StatelessWidget {
                       'Grand total',
                       fontSize: 18,
                     ),
-                    BlocSelector<CartBloc, CartState, double>(
+                    BlocSelector<BagTabBloc, BagTabState, double>(
                       selector: (state) {
                         return state.total;
                       },

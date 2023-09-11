@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
-import 'package:flutter_assignment_fengo/business_logic/blocs/cart_bloc/cart_bloc.dart';
 import 'package:flutter_assignment_fengo/business_logic/cubits/cubit/coupon_cubit.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
@@ -13,16 +12,16 @@ import 'package:iconsax/iconsax.dart';
 class CouponChatSection extends StatelessWidget {
   const CouponChatSection({
     super.key,
-    required this.isCouponApplied,
   });
-  final bool isCouponApplied;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return BlocBuilder<CartBloc, CartState>(
-      builder: (context, state) {
-        double amount = 300 - state.total;
-        if (amount <= 0) {
+    return BlocSelector<BagTabBloc, BagTabState, double>(
+      selector: (state) {
+        return state.total;
+      },
+      builder: (context, amount) {
+        if (amount >= 300) {
           return Column(
             children: [
               const ChatBubble(
@@ -53,7 +52,8 @@ class CouponChatSection extends StatelessWidget {
               BlocSelector<BagTabBloc, BagTabState, bool>(
                 selector: (state) {
                   bool visible =
-                      (state.couponValue == null) && !state.withoutCoupon;
+                      (state.couponValue == null) || state.total >= 300;
+
                   return visible;
                 },
                 builder: (context, visible) {
@@ -109,7 +109,7 @@ class CouponChatSection extends StatelessWidget {
                   style: DefaultTextStyle.of(context).style,
                   children: <TextSpan>[
                     TextSpan(
-                        text: '₹$amount',
+                        text: '₹${300 - amount}',
                         style: const TextStyle(fontWeight: FontWeight.w900)),
                     const TextSpan(text: ' to avail coupon'),
                   ],

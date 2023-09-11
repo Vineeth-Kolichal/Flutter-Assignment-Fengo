@@ -6,15 +6,13 @@ import 'package:flutter_assignment_fengo/presentation/widgets/custom_elevated_bu
 class SelectTimeSlot extends StatelessWidget {
   const SelectTimeSlot({
     super.key,
-    required this.isSelected,
-    required this.visible,
+   
   });
-  final bool isSelected;
-  final bool visible;
+  
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: visible,
+      visible: false,
       child: Column(
         children: [
           ChatBubble(
@@ -28,7 +26,7 @@ class SelectTimeSlot extends StatelessWidget {
             ),
           ),
           Visibility(
-            visible: !isSelected,
+            visible: false,
             child: ChatBubble(
                 isSender: false,
                 isTransparant: true,
