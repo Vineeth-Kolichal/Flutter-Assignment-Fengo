@@ -35,7 +35,6 @@ class ZappyApp extends StatelessWidget {
             primarySwatch: customPrimaryColor,
             fontFamily: GoogleFonts.poppins().fontFamily),
         debugShowCheckedModeBanner: false,
-        //  home: SuccessScreen(),
         onGenerateRoute: appRouteGenerate.onGenerateRoute,
       ),
     );

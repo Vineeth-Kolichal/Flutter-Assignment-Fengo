@@ -49,7 +49,8 @@ class BagTab extends StatelessWidget {
             height: size.height,
             width: size.height,
             child: Image.asset(
-              'assets/images/background_chat.png',
+              opacity: const AlwaysStoppedAnimation(.07),
+              'assets/images/background_image.png',
               fit: BoxFit.cover,
             ),
           ),

@@ -11,7 +11,6 @@ class AddInstructionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return BlocSelector<BagTabBloc, BagTabState, bool>(
       selector: (state) {
         return state.showInstructionTextField;
