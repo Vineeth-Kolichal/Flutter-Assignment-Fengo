@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/core/colors/colors.dart';
+import 'package:flutter_assignment_fengo/presentation/routes/routes.dart';
 import 'package:flutter_assignment_fengo/presentation/widgets/custom_elevated_button.dart';
 import 'package:lottie/lottie.dart';
 
@@ -39,7 +40,9 @@ class SuccessScreen extends StatelessWidget {
               labelText: 'Continue Shopping',
               fontColor: greenFontColor,
               width: 0.5,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed(Routes.home);
+              },
             )
           ],
         ),

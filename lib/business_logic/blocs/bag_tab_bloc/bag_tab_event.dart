@@ -20,4 +20,6 @@ class BagTabEvent with _$BagTabEvent {
   const factory BagTabEvent.addInstructions({required String instruction}) =
       AddInstructions;
   const factory BagTabEvent.showEditInstruction() = ShowEditInstruction;
+  const factory BagTabEvent.placeOrder() = PlaceOrder;
+  const factory BagTabEvent.cancelOrder() = CandelOrder;
 }

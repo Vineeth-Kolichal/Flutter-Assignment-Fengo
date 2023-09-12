@@ -4,4 +4,5 @@ abstract class CartRepo {
   Map<ProductModel, int> getCartItems();
   void addCount(int id);
   void decreseCount(int id);
+  void placeOrder();
 }

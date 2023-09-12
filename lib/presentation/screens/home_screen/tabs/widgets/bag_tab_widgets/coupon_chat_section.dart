@@ -34,11 +34,11 @@ class CouponChatSection extends StatelessWidget {
         if (states["total"] >= 300) {
           return Column(
             children: [
-              const ChatBubble(
+               ChatBubble(
                 isSender: false,
                 content: Row(
                   children: [
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Icon(
                         Iconsax.discount_shape,
@@ -48,12 +48,16 @@ class CouponChatSection extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          '9 Unused Coupons',
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w700),
+                        BlocBuilder<CouponCubit, CouponState>(
+                          builder: (context, state) {
+                            return Text(
+                              '${state.coupons.length} Unused Coupons',
+                              style: const TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.w700),
+                            );
+                          },
                         ),
-                        Text('Apply coupon and get discount')
+                        const Text('Apply coupon and get discount')
                       ],
                     )
                   ],

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
-import 'package:flutter_assignment_fengo/presentation/screens/home_screen/tabs/widgets/bag_tab_widgets/text_chat_content.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'widgets/bag_tab_widgets/add_instructions_section.dart';
@@ -21,6 +20,9 @@ class BagTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      context.read<BagTabBloc>().add(const GetAllCartItems());
+    });
     Size size = MediaQuery.of(context).size;
     List<Widget> bagChatItems = [
       const PlaceOrderOrCancelButtons(),
@@ -53,6 +55,11 @@ class BagTab extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: BlocBuilder<BagTabBloc, BagTabState>(
               builder: (context, state) {
+                if (state.isLoading) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
                 if (state.cartItems.isEmpty) {
                   return const Center(
                     child: Text('Cart is Empty'),
@@ -78,4 +85,3 @@ class BagTab extends StatelessWidget {
     );
   }
 }
-

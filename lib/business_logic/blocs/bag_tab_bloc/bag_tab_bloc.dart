@@ -1,4 +1,5 @@
-import 'dart:async';
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
 import 'package:flutter_assignment_fengo/data/data_providers/cart_data_provider/cart_data_provider.dart';
@@ -18,7 +19,7 @@ class BagTabBloc extends Bloc<BagTabEvent, BagTabState> {
   BagTabBloc() : super(BagTabState.initial()) {
     //Get all cart items
     on<GetAllCartItems>((event, emit) {
-      //  emit(state.copyWith(cartItems: {}, itemCount: 0, total: 0.0));
+      emit(state.copyWith(isLoading: true));
       Map<ProductModel, int> cartItems = cartRepo.getCartItems();
       int count = 0;
       double totalAmount = 0.0;
@@ -34,7 +35,10 @@ class BagTabBloc extends Bloc<BagTabEvent, BagTabState> {
       }
       //emiting cart to ui
       emit(state.copyWith(
-          cartItems: cartItems, itemCount: count, total: totalAmount));
+          isLoading: false,
+          cartItems: cartItems,
+          itemCount: count,
+          total: totalAmount));
     });
 
     //For changing the ui when the item count changes by the increment button click
@@ -76,14 +80,46 @@ class BagTabBloc extends Bloc<BagTabEvent, BagTabState> {
     on<EditDeliveryMethod>((event, emit) =>
         emit(state.copyWith(deliveryMethod: null, selectedTimeSlot: null)));
 
+    //update ui when user click edit button of seleted time slot
     on<EditTimeSlot>(
         (event, emit) => emit(state.copyWith(selectedTimeSlot: null)));
 
+    //show the textfield to add instructions
     on<ShowOrHideInstructionField>(
         (event, emit) => emit(state.copyWith(showInstructionTextField: true)));
+
+    //udate ui when user adding instructions
     on<AddInstructions>((event, emit) => emit(state.copyWith(
         instruction: event.instruction, showInstructionTextField: false)));
+
+    //show text field when user click edit button on the entered instruction
     on<ShowEditInstruction>((event, emit) => emit(
         state.copyWith(instruction: null, showInstructionTextField: true)));
+
+    //udate Ui when user click on place order button
+    on<PlaceOrder>((event, emit) {
+      //log order details on debug console
+      log("Cart Items :${state.cartItems}");
+      log('Coupon value :${state.couponValue ?? 'proceed without coupon'}');
+      log("Delivery method: ${state.deliveryMethod}");
+      if (state.deliveryMethod == DeliveryMethod.takeDelivery) {
+        log("Selected Time slot: ${state.selectedTimeSlot}");
+      }
+      log("instruction : ${state.instruction ?? "No instruction added"}");
+      //clear the cart items
+      cartRepo.placeOrder();
+      //update ui to initial state
+      emit(BagTabState.initial());
+    });
+
+    //update ui when user click on cance button
+    on<CandelOrder>((event, emit) => emit(state.copyWith(
+          couponValue: null,
+          deliveryMethod: null,
+          withoutCoupon: false,
+          selectedTimeSlot: null,
+          showInstructionTextField: false,
+          instruction: null,
+        )));
   }
 }

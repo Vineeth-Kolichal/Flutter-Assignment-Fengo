@@ -24,10 +24,10 @@ Future<dynamic> couponGridDialoge(BuildContext context, Size size) {
                   color: whiteBackgroundColor,
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(right: 10),
+                            padding: EdgeInsets.only(right: 10),
                             child: Icon(
                               Iconsax.discount_shape,
                               color: customPrimaryColor,

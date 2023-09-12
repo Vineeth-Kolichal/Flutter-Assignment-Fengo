@@ -37,4 +37,9 @@ class CartDataProvider implements CartRepo {
       }
     }
   }
+
+  @override
+  void placeOrder() {
+    cartItems.clear();
+  }
 }

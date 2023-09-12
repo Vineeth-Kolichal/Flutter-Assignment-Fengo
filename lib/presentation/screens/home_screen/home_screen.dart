@@ -14,13 +14,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
-      initialIndex: 2,
+      initialIndex: 0,
       child: Scaffold(
         appBar: AppBar(
-          // title: Image.asset(
-          //   'assets/images/zappy_logo.png',
-          //   height: 45,
-          // ),
+          title: Image.asset(
+            'assets/images/zappy_logo.png',
+            height: 45,
+          ),
           bottom: const TabBar(tabs: [
             CustomTaHeadbWidget(
               icon: Iconsax.shop,
@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Positioned(
                       right: 0,
-                      top: -5,
+                      top: -3,
                       child: Container(
                         // height: 30,
                         decoration: const BoxDecoration(
@@ -65,10 +65,11 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 )),
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_vert_outlined))
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.more_vert_outlined))
           ],
         ),
-        body: TabBarView(children: [ShopTab(), ItemsTab(), BagTab()]),
+        body: const TabBarView(children: [ShopTab(), ItemsTab(), BagTab()]),
       ),
     );
   }
