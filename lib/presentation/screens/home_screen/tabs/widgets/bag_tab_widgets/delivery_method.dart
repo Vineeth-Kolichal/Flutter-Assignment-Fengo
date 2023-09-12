@@ -16,7 +16,9 @@ class DeliveryMethodChat extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocSelector<BagTabBloc, BagTabState, bool>(
       selector: (state) {
-        bool visible = (state.couponValue != null) || state.withoutCoupon;
+        bool visible = (state.couponValue != null) ||
+            state.withoutCoupon ||
+            state.deliveryMethod != null;
         return visible;
       },
       builder: (context, visible) {
@@ -25,12 +27,12 @@ class DeliveryMethodChat extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ChatBubble(
+              const ChatBubble(
                 isSender: false,
                 content: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Select delivery method',
                         style: TextStyle(fontSize: 16),
@@ -64,9 +66,11 @@ class DeliveryMethodChat extends StatelessWidget {
                             fontColor: textBlackColor,
                             onPressed: () {
                               context.read<BagTabBloc>().add(
-                                  const SelectDeliverymethod(
+                                    const SelectDeliverymethod(
                                       deliveryMethod:
-                                          DeliveryMethod.homeDelivery));
+                                          DeliveryMethod.homeDelivery,
+                                    ),
+                                  );
                             },
                           ),
                         ),

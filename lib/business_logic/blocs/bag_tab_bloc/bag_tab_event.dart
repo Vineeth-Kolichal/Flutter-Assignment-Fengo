@@ -8,6 +8,11 @@ class BagTabEvent with _$BagTabEvent {
   const factory BagTabEvent.applyCoupon({required double amount}) = ApplyCoupon;
   const factory BagTabEvent.selectDeliveryMethod(
       {required DeliveryMethod deliveryMethod}) = SelectDeliverymethod;
-  const factory BagTabEvent.withoutCoupon() = WithoutCoupon;
+  const factory BagTabEvent.withoutCoupon({required bool withoutCoupon}) =
+      WithoutCoupon;
   const factory BagTabEvent.setCouponNotApplied() = SetCouponNotApplied;
+  const factory BagTabEvent.selectTimeSlotEvent({required String timeSlot}) =
+      SelectTimeSlotEvent;
+  const factory BagTabEvent.editDeliveryMethod() = EditDeliveryMethod;
+  const factory BagTabEvent.editTimeSlot() = EditTimeSlot;
 }

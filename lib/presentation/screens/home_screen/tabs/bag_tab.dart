@@ -10,6 +10,7 @@ import 'widgets/bag_tab_widgets/delivery_method.dart';
 import 'widgets/bag_tab_widgets/proceed_without_coupon.dart';
 import 'widgets/bag_tab_widgets/select_time_slot.dart';
 import 'widgets/bag_tab_widgets/selected_delivery_method.dart';
+import 'widgets/bag_tab_widgets/selected_time_slot.dart';
 
 class BagTab extends StatelessWidget {
   const BagTab({super.key});
@@ -19,6 +20,7 @@ class BagTab extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     List<Widget> bagChatItems = [
       const BillDetailsSectionChat(),
+      const SelectedTimeSlotWidget(),
       const SelectTimeSlot(),
       const SelectedDeliverymethod(),
       const DeliveryMethodChat(),
@@ -64,3 +66,4 @@ class BagTab extends StatelessWidget {
     );
   }
 }
+

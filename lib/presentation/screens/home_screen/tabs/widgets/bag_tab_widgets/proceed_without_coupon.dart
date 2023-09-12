@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
+import 'package:flutter_assignment_fengo/core/colors/colors.dart';
+import 'package:flutter_assignment_fengo/presentation/screens/home_screen/tabs/widgets/bag_tab_widgets/text_chat_content.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bubble_chat_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,15 +19,13 @@ class ProceedWithoutCoupon extends StatelessWidget {
       builder: (context, visible) {
         return Visibility(
           visible: visible,
-          child: const ChatBubble(
-            delivered: true,
-            content: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'Proceed without coupon',
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
+          child: TextChatContent(
+            message: 'Proceed without coupon',
+            onpressed: () {
+              context
+                  .read<BagTabBloc>()
+                  .add(const WithoutCoupon(withoutCoupon: false));
+            },
           ),
         );
       },

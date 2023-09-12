@@ -16,12 +16,23 @@ class CouponChatSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return BlocSelector<BagTabBloc, BagTabState, double>(
+    return BlocSelector<BagTabBloc, BagTabState, Map<String, dynamic>>(
       selector: (state) {
-        return state.total;
+        bool proceed = (state.couponValue == null) &&
+            state.total < 300.0 &&
+            !state.withoutCoupon;
+        bool applyCoupon = (state.couponValue == null) &&
+            state.total >= 300.0 &&
+            !state.withoutCoupon;
+        Map<String, dynamic> states = {
+          "total": state.total,
+          "proceed": proceed,
+          "applyCoupon": applyCoupon
+        };
+        return states;
       },
-      builder: (context, amount) {
-        if (amount >= 300) {
+      builder: (context, states) {
+        if (states["total"] >= 300) {
           return Column(
             children: [
               const ChatBubble(
@@ -49,97 +60,88 @@ class CouponChatSection extends StatelessWidget {
                   ],
                 ),
               ),
+              Visibility(
+                visible: states["applyCoupon"],
+                child: ChatBubble(
+                  isSender: false,
+                  isTransparant: true,
+                  content: CustomElevatedButton(
+                    labelText: "Continue without applying",
+                    backgroundColor: whiteBackgroundColor,
+                    fontColor: customPrimaryColor,
+                    onPressed: () {
+                      context
+                          .read<BagTabBloc>()
+                          .add(const WithoutCoupon(withoutCoupon: true));
+                    },
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: states["applyCoupon"],
+                child: ChatBubble(
+                  isSender: false,
+                  isTransparant: true,
+                  content: CustomElevatedButton(
+                    labelText: "Apply coupon",
+                    backgroundColor: customPrimaryColor,
+                    fontColor: textWhiteColor,
+                    onPressed: () {
+                      context.read<CouponCubit>().getCoupons();
+                      couponGridDialoge(context, size);
+                    },
+                  ),
+                ),
+              )
+            ],
+          );
+        } else {
+          return Column(
+            children: [
+              ChatBubble(
+                isSender: false,
+                content: RichText(
+                  text: TextSpan(
+                    text: 'Add produts worth ',
+                    style: DefaultTextStyle.of(context).style,
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: '₹${(300 - states["total"]).toStringAsFixed(2)}',
+                          style: const TextStyle(fontWeight: FontWeight.w900)),
+                      const TextSpan(text: ' to avail coupon'),
+                    ],
+                  ),
+                ),
+              ),
               BlocSelector<BagTabBloc, BagTabState, bool>(
                 selector: (state) {
-                  bool visible =
-                      (state.couponValue == null) || state.total >= 300;
-
-                  return visible;
+                  return (state.couponValue == null) &&
+                      state.total < 300.0 &&
+                      !state.withoutCoupon;
                 },
                 builder: (context, visible) {
-                  return Column(
-                    children: [
-                      Visibility(
-                        visible: visible,
-                        child: ChatBubble(
-                          isSender: false,
-                          isTransparant: true,
-                          content: CustomElevatedButton(
-                            labelText: "Continue without applying",
-                            backgroundColor: whiteBackgroundColor,
-                            fontColor: customPrimaryColor,
-                            onPressed: () {
-                              context
-                                  .read<BagTabBloc>()
-                                  .add(const WithoutCoupon());
-                            },
-                          ),
-                        ),
+                  return Visibility(
+                    visible: states["proceed"],
+                    child: ChatBubble(
+                      isSender: false,
+                      isTransparant: true,
+                      content: CustomElevatedButton(
+                        labelText: 'Proceed',
+                        backgroundColor: customPrimaryColor,
+                        fontColor: textWhiteColor,
+                        onPressed: () {
+                          context
+                              .read<BagTabBloc>()
+                              .add(const WithoutCoupon(withoutCoupon: true));
+                        },
                       ),
-                      Visibility(
-                        visible: visible,
-                        child: ChatBubble(
-                          isSender: false,
-                          isTransparant: true,
-                          content: CustomElevatedButton(
-                            labelText: "Apply coupon",
-                            backgroundColor: customPrimaryColor,
-                            fontColor: textWhiteColor,
-                            onPressed: () {
-                              context.read<CouponCubit>().getCoupons();
-                              couponGridDialoge(context, size);
-                            },
-                          ),
-                        ),
-                      )
-                    ],
+                    ),
                   );
                 },
               )
             ],
           );
         }
-        return Column(
-          children: [
-            ChatBubble(
-              isSender: false,
-              content: RichText(
-                text: TextSpan(
-                  text: 'Add produts worth ',
-                  style: DefaultTextStyle.of(context).style,
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: '₹${300 - amount}',
-                        style: const TextStyle(fontWeight: FontWeight.w900)),
-                    const TextSpan(text: ' to avail coupon'),
-                  ],
-                ),
-              ),
-            ),
-            BlocSelector<BagTabBloc, BagTabState, bool>(
-              selector: (state) {
-                return !state.withoutCoupon;
-              },
-              builder: (context, visible) {
-                return Visibility(
-                  visible: visible,
-                  child: ChatBubble(
-                    isSender: false,
-                    isTransparant: true,
-                    content: CustomElevatedButton(
-                      labelText: 'Proceed',
-                      backgroundColor: customPrimaryColor,
-                      fontColor: textWhiteColor,
-                      onPressed: () {
-                        context.read<BagTabBloc>().add(const WithoutCoupon());
-                      },
-                    ),
-                  ),
-                );
-              },
-            )
-          ],
-        );
       },
     );
   }
@@ -233,7 +235,9 @@ class CouponChatSection extends StatelessWidget {
               backgroundColor: whiteBackgroundColor,
               fontColor: customPrimaryColor,
               onPressed: () {
-                context.read<BagTabBloc>().add(const WithoutCoupon());
+                context
+                    .read<BagTabBloc>()
+                    .add(const WithoutCoupon(withoutCoupon: true));
                 Navigator.of(ctx).pop();
               },
             )

@@ -24,8 +24,11 @@ mixin _$BagTabEvent {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,8 +38,11 @@ mixin _$BagTabEvent {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,8 +52,11 @@ mixin _$BagTabEvent {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +69,9 @@ mixin _$BagTabEvent {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,6 +83,9 @@ mixin _$BagTabEvent {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +97,9 @@ mixin _$BagTabEvent {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -149,8 +167,11 @@ class _$GetAllCartItems implements GetAllCartItems {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
     return getAllCartItems();
   }
@@ -163,8 +184,11 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
     return getAllCartItems?.call();
   }
@@ -177,8 +201,11 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (getAllCartItems != null) {
@@ -197,6 +224,9 @@ class _$GetAllCartItems implements GetAllCartItems {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return getAllCartItems(this);
   }
@@ -211,6 +241,9 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return getAllCartItems?.call(this);
   }
@@ -225,6 +258,9 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (getAllCartItems != null) {
@@ -309,8 +345,11 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
     return itemCountDecrement(id);
   }
@@ -323,8 +362,11 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
     return itemCountDecrement?.call(id);
   }
@@ -337,8 +379,11 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (itemCountDecrement != null) {
@@ -357,6 +402,9 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return itemCountDecrement(this);
   }
@@ -371,6 +419,9 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return itemCountDecrement?.call(this);
   }
@@ -385,6 +436,9 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (itemCountDecrement != null) {
@@ -474,8 +528,11 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
     return itemCountIncrement(id);
   }
@@ -488,8 +545,11 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
     return itemCountIncrement?.call(id);
   }
@@ -502,8 +562,11 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (itemCountIncrement != null) {
@@ -522,6 +585,9 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return itemCountIncrement(this);
   }
@@ -536,6 +602,9 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return itemCountIncrement?.call(this);
   }
@@ -550,6 +619,9 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (itemCountIncrement != null) {
@@ -638,8 +710,11 @@ class _$ApplyCoupon implements ApplyCoupon {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
     return applyCoupon(amount);
   }
@@ -652,8 +727,11 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
     return applyCoupon?.call(amount);
   }
@@ -666,8 +744,11 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (applyCoupon != null) {
@@ -686,6 +767,9 @@ class _$ApplyCoupon implements ApplyCoupon {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return applyCoupon(this);
   }
@@ -700,6 +784,9 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return applyCoupon?.call(this);
   }
@@ -714,6 +801,9 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (applyCoupon != null) {
@@ -804,8 +894,11 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
     return selectDeliveryMethod(deliveryMethod);
   }
@@ -818,8 +911,11 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
     return selectDeliveryMethod?.call(deliveryMethod);
   }
@@ -832,8 +928,11 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (selectDeliveryMethod != null) {
@@ -852,6 +951,9 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return selectDeliveryMethod(this);
   }
@@ -866,6 +968,9 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return selectDeliveryMethod?.call(this);
   }
@@ -880,6 +985,9 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (selectDeliveryMethod != null) {
@@ -904,6 +1012,8 @@ abstract class _$$WithoutCouponCopyWith<$Res> {
   factory _$$WithoutCouponCopyWith(
           _$WithoutCoupon value, $Res Function(_$WithoutCoupon) then) =
       __$$WithoutCouponCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool withoutCoupon});
 }
 
 /// @nodoc
@@ -913,26 +1023,51 @@ class __$$WithoutCouponCopyWithImpl<$Res>
   __$$WithoutCouponCopyWithImpl(
       _$WithoutCoupon _value, $Res Function(_$WithoutCoupon) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? withoutCoupon = null,
+  }) {
+    return _then(_$WithoutCoupon(
+      withoutCoupon: null == withoutCoupon
+          ? _value.withoutCoupon
+          : withoutCoupon // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$WithoutCoupon implements WithoutCoupon {
-  const _$WithoutCoupon();
+  const _$WithoutCoupon({required this.withoutCoupon});
+
+  @override
+  final bool withoutCoupon;
 
   @override
   String toString() {
-    return 'BagTabEvent.withoutCoupon()';
+    return 'BagTabEvent.withoutCoupon(withoutCoupon: $withoutCoupon)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$WithoutCoupon);
+        (other.runtimeType == runtimeType &&
+            other is _$WithoutCoupon &&
+            (identical(other.withoutCoupon, withoutCoupon) ||
+                other.withoutCoupon == withoutCoupon));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, withoutCoupon);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WithoutCouponCopyWith<_$WithoutCoupon> get copyWith =>
+      __$$WithoutCouponCopyWithImpl<_$WithoutCoupon>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -943,10 +1078,13 @@ class _$WithoutCoupon implements WithoutCoupon {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
-    return withoutCoupon();
+    return withoutCoupon(this.withoutCoupon);
   }
 
   @override
@@ -957,10 +1095,13 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
-    return withoutCoupon?.call();
+    return withoutCoupon?.call(this.withoutCoupon);
   }
 
   @override
@@ -971,12 +1112,15 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (withoutCoupon != null) {
-      return withoutCoupon();
+      return withoutCoupon(this.withoutCoupon);
     }
     return orElse();
   }
@@ -991,6 +1135,9 @@ class _$WithoutCoupon implements WithoutCoupon {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return withoutCoupon(this);
   }
@@ -1005,6 +1152,9 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return withoutCoupon?.call(this);
   }
@@ -1019,6 +1169,9 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (withoutCoupon != null) {
@@ -1029,7 +1182,13 @@ class _$WithoutCoupon implements WithoutCoupon {
 }
 
 abstract class WithoutCoupon implements BagTabEvent {
-  const factory WithoutCoupon() = _$WithoutCoupon;
+  const factory WithoutCoupon({required final bool withoutCoupon}) =
+      _$WithoutCoupon;
+
+  bool get withoutCoupon;
+  @JsonKey(ignore: true)
+  _$$WithoutCouponCopyWith<_$WithoutCoupon> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1076,8 +1235,11 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     required TResult Function(double amount) applyCoupon,
     required TResult Function(DeliveryMethod deliveryMethod)
         selectDeliveryMethod,
-    required TResult Function() withoutCoupon,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
     required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
   }) {
     return setCouponNotApplied();
   }
@@ -1090,8 +1252,11 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult? Function(int id)? itemCountIncrement,
     TResult? Function(double amount)? applyCoupon,
     TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult? Function()? withoutCoupon,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
     TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
   }) {
     return setCouponNotApplied?.call();
   }
@@ -1104,8 +1269,11 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult Function(int id)? itemCountIncrement,
     TResult Function(double amount)? applyCoupon,
     TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
-    TResult Function()? withoutCoupon,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
     TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
     required TResult orElse(),
   }) {
     if (setCouponNotApplied != null) {
@@ -1124,6 +1292,9 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
     required TResult Function(WithoutCoupon value) withoutCoupon,
     required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
   }) {
     return setCouponNotApplied(this);
   }
@@ -1138,6 +1309,9 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult? Function(WithoutCoupon value)? withoutCoupon,
     TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
   }) {
     return setCouponNotApplied?.call(this);
   }
@@ -1152,6 +1326,9 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
     TResult Function(WithoutCoupon value)? withoutCoupon,
     TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
     required TResult orElse(),
   }) {
     if (setCouponNotApplied != null) {
@@ -1166,6 +1343,493 @@ abstract class SetCouponNotApplied implements BagTabEvent {
 }
 
 /// @nodoc
+abstract class _$$SelectTimeSlotEventCopyWith<$Res> {
+  factory _$$SelectTimeSlotEventCopyWith(_$SelectTimeSlotEvent value,
+          $Res Function(_$SelectTimeSlotEvent) then) =
+      __$$SelectTimeSlotEventCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String timeSlot});
+}
+
+/// @nodoc
+class __$$SelectTimeSlotEventCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$SelectTimeSlotEvent>
+    implements _$$SelectTimeSlotEventCopyWith<$Res> {
+  __$$SelectTimeSlotEventCopyWithImpl(
+      _$SelectTimeSlotEvent _value, $Res Function(_$SelectTimeSlotEvent) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? timeSlot = null,
+  }) {
+    return _then(_$SelectTimeSlotEvent(
+      timeSlot: null == timeSlot
+          ? _value.timeSlot
+          : timeSlot // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
+  const _$SelectTimeSlotEvent({required this.timeSlot});
+
+  @override
+  final String timeSlot;
+
+  @override
+  String toString() {
+    return 'BagTabEvent.selectTimeSlotEvent(timeSlot: $timeSlot)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectTimeSlotEvent &&
+            (identical(other.timeSlot, timeSlot) ||
+                other.timeSlot == timeSlot));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, timeSlot);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SelectTimeSlotEventCopyWith<_$SelectTimeSlotEvent> get copyWith =>
+      __$$SelectTimeSlotEventCopyWithImpl<_$SelectTimeSlotEvent>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllCartItems,
+    required TResult Function(int id) itemCountDecrement,
+    required TResult Function(int id) itemCountIncrement,
+    required TResult Function(double amount) applyCoupon,
+    required TResult Function(DeliveryMethod deliveryMethod)
+        selectDeliveryMethod,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
+    required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
+  }) {
+    return selectTimeSlotEvent(timeSlot);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getAllCartItems,
+    TResult? Function(int id)? itemCountDecrement,
+    TResult? Function(int id)? itemCountIncrement,
+    TResult? Function(double amount)? applyCoupon,
+    TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
+    TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
+  }) {
+    return selectTimeSlotEvent?.call(timeSlot);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllCartItems,
+    TResult Function(int id)? itemCountDecrement,
+    TResult Function(int id)? itemCountIncrement,
+    TResult Function(double amount)? applyCoupon,
+    TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
+    TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
+    required TResult orElse(),
+  }) {
+    if (selectTimeSlotEvent != null) {
+      return selectTimeSlotEvent(timeSlot);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllCartItems value) getAllCartItems,
+    required TResult Function(ItemCountDecrement value) itemCountDecrement,
+    required TResult Function(ItemCountIncrement value) itemCountIncrement,
+    required TResult Function(ApplyCoupon value) applyCoupon,
+    required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
+    required TResult Function(WithoutCoupon value) withoutCoupon,
+    required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
+  }) {
+    return selectTimeSlotEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetAllCartItems value)? getAllCartItems,
+    TResult? Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult? Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
+    TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult? Function(WithoutCoupon value)? withoutCoupon,
+    TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
+  }) {
+    return selectTimeSlotEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllCartItems value)? getAllCartItems,
+    TResult Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult Function(ApplyCoupon value)? applyCoupon,
+    TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult Function(WithoutCoupon value)? withoutCoupon,
+    TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
+    required TResult orElse(),
+  }) {
+    if (selectTimeSlotEvent != null) {
+      return selectTimeSlotEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SelectTimeSlotEvent implements BagTabEvent {
+  const factory SelectTimeSlotEvent({required final String timeSlot}) =
+      _$SelectTimeSlotEvent;
+
+  String get timeSlot;
+  @JsonKey(ignore: true)
+  _$$SelectTimeSlotEventCopyWith<_$SelectTimeSlotEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditDeliveryMethodCopyWith<$Res> {
+  factory _$$EditDeliveryMethodCopyWith(_$EditDeliveryMethod value,
+          $Res Function(_$EditDeliveryMethod) then) =
+      __$$EditDeliveryMethodCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EditDeliveryMethodCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$EditDeliveryMethod>
+    implements _$$EditDeliveryMethodCopyWith<$Res> {
+  __$$EditDeliveryMethodCopyWithImpl(
+      _$EditDeliveryMethod _value, $Res Function(_$EditDeliveryMethod) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EditDeliveryMethod implements EditDeliveryMethod {
+  const _$EditDeliveryMethod();
+
+  @override
+  String toString() {
+    return 'BagTabEvent.editDeliveryMethod()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EditDeliveryMethod);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllCartItems,
+    required TResult Function(int id) itemCountDecrement,
+    required TResult Function(int id) itemCountIncrement,
+    required TResult Function(double amount) applyCoupon,
+    required TResult Function(DeliveryMethod deliveryMethod)
+        selectDeliveryMethod,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
+    required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
+  }) {
+    return editDeliveryMethod();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getAllCartItems,
+    TResult? Function(int id)? itemCountDecrement,
+    TResult? Function(int id)? itemCountIncrement,
+    TResult? Function(double amount)? applyCoupon,
+    TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
+    TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
+  }) {
+    return editDeliveryMethod?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllCartItems,
+    TResult Function(int id)? itemCountDecrement,
+    TResult Function(int id)? itemCountIncrement,
+    TResult Function(double amount)? applyCoupon,
+    TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
+    TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
+    required TResult orElse(),
+  }) {
+    if (editDeliveryMethod != null) {
+      return editDeliveryMethod();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllCartItems value) getAllCartItems,
+    required TResult Function(ItemCountDecrement value) itemCountDecrement,
+    required TResult Function(ItemCountIncrement value) itemCountIncrement,
+    required TResult Function(ApplyCoupon value) applyCoupon,
+    required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
+    required TResult Function(WithoutCoupon value) withoutCoupon,
+    required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
+  }) {
+    return editDeliveryMethod(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetAllCartItems value)? getAllCartItems,
+    TResult? Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult? Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
+    TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult? Function(WithoutCoupon value)? withoutCoupon,
+    TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
+  }) {
+    return editDeliveryMethod?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllCartItems value)? getAllCartItems,
+    TResult Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult Function(ApplyCoupon value)? applyCoupon,
+    TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult Function(WithoutCoupon value)? withoutCoupon,
+    TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
+    required TResult orElse(),
+  }) {
+    if (editDeliveryMethod != null) {
+      return editDeliveryMethod(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditDeliveryMethod implements BagTabEvent {
+  const factory EditDeliveryMethod() = _$EditDeliveryMethod;
+}
+
+/// @nodoc
+abstract class _$$EditTimeSlotCopyWith<$Res> {
+  factory _$$EditTimeSlotCopyWith(
+          _$EditTimeSlot value, $Res Function(_$EditTimeSlot) then) =
+      __$$EditTimeSlotCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EditTimeSlotCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$EditTimeSlot>
+    implements _$$EditTimeSlotCopyWith<$Res> {
+  __$$EditTimeSlotCopyWithImpl(
+      _$EditTimeSlot _value, $Res Function(_$EditTimeSlot) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EditTimeSlot implements EditTimeSlot {
+  const _$EditTimeSlot();
+
+  @override
+  String toString() {
+    return 'BagTabEvent.editTimeSlot()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EditTimeSlot);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllCartItems,
+    required TResult Function(int id) itemCountDecrement,
+    required TResult Function(int id) itemCountIncrement,
+    required TResult Function(double amount) applyCoupon,
+    required TResult Function(DeliveryMethod deliveryMethod)
+        selectDeliveryMethod,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
+    required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
+  }) {
+    return editTimeSlot();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getAllCartItems,
+    TResult? Function(int id)? itemCountDecrement,
+    TResult? Function(int id)? itemCountIncrement,
+    TResult? Function(double amount)? applyCoupon,
+    TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
+    TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
+  }) {
+    return editTimeSlot?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllCartItems,
+    TResult Function(int id)? itemCountDecrement,
+    TResult Function(int id)? itemCountIncrement,
+    TResult Function(double amount)? applyCoupon,
+    TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
+    TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
+    required TResult orElse(),
+  }) {
+    if (editTimeSlot != null) {
+      return editTimeSlot();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllCartItems value) getAllCartItems,
+    required TResult Function(ItemCountDecrement value) itemCountDecrement,
+    required TResult Function(ItemCountIncrement value) itemCountIncrement,
+    required TResult Function(ApplyCoupon value) applyCoupon,
+    required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
+    required TResult Function(WithoutCoupon value) withoutCoupon,
+    required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
+  }) {
+    return editTimeSlot(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetAllCartItems value)? getAllCartItems,
+    TResult? Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult? Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
+    TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult? Function(WithoutCoupon value)? withoutCoupon,
+    TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
+  }) {
+    return editTimeSlot?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllCartItems value)? getAllCartItems,
+    TResult Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult Function(ApplyCoupon value)? applyCoupon,
+    TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult Function(WithoutCoupon value)? withoutCoupon,
+    TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
+    required TResult orElse(),
+  }) {
+    if (editTimeSlot != null) {
+      return editTimeSlot(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditTimeSlot implements BagTabEvent {
+  const factory EditTimeSlot() = _$EditTimeSlot;
+}
+
+/// @nodoc
 mixin _$BagTabState {
   Map<ProductModel, int> get cartItems => throw _privateConstructorUsedError;
   double get total => throw _privateConstructorUsedError;
@@ -1173,6 +1837,7 @@ mixin _$BagTabState {
   double? get couponValue => throw _privateConstructorUsedError;
   DeliveryMethod? get deliveryMethod => throw _privateConstructorUsedError;
   bool get withoutCoupon => throw _privateConstructorUsedError;
+  String? get selectedTimeSlot => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $BagTabStateCopyWith<BagTabState> get copyWith =>
@@ -1191,7 +1856,8 @@ abstract class $BagTabStateCopyWith<$Res> {
       int itemCount,
       double? couponValue,
       DeliveryMethod? deliveryMethod,
-      bool withoutCoupon});
+      bool withoutCoupon,
+      String? selectedTimeSlot});
 }
 
 /// @nodoc
@@ -1213,6 +1879,7 @@ class _$BagTabStateCopyWithImpl<$Res, $Val extends BagTabState>
     Object? couponValue = freezed,
     Object? deliveryMethod = freezed,
     Object? withoutCoupon = null,
+    Object? selectedTimeSlot = freezed,
   }) {
     return _then(_value.copyWith(
       cartItems: null == cartItems
@@ -1239,6 +1906,10 @@ class _$BagTabStateCopyWithImpl<$Res, $Val extends BagTabState>
           ? _value.withoutCoupon
           : withoutCoupon // ignore: cast_nullable_to_non_nullable
               as bool,
+      selectedTimeSlot: freezed == selectedTimeSlot
+          ? _value.selectedTimeSlot
+          : selectedTimeSlot // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -1256,7 +1927,8 @@ abstract class _$$_InitialCopyWith<$Res> implements $BagTabStateCopyWith<$Res> {
       int itemCount,
       double? couponValue,
       DeliveryMethod? deliveryMethod,
-      bool withoutCoupon});
+      bool withoutCoupon,
+      String? selectedTimeSlot});
 }
 
 /// @nodoc
@@ -1275,6 +1947,7 @@ class __$$_InitialCopyWithImpl<$Res>
     Object? couponValue = freezed,
     Object? deliveryMethod = freezed,
     Object? withoutCoupon = null,
+    Object? selectedTimeSlot = freezed,
   }) {
     return _then(_$_Initial(
       cartItems: null == cartItems
@@ -1301,6 +1974,10 @@ class __$$_InitialCopyWithImpl<$Res>
           ? _value.withoutCoupon
           : withoutCoupon // ignore: cast_nullable_to_non_nullable
               as bool,
+      selectedTimeSlot: freezed == selectedTimeSlot
+          ? _value.selectedTimeSlot
+          : selectedTimeSlot // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1314,7 +1991,8 @@ class _$_Initial implements _Initial {
       required this.itemCount,
       required this.couponValue,
       required this.deliveryMethod,
-      required this.withoutCoupon})
+      required this.withoutCoupon,
+      required this.selectedTimeSlot})
       : _cartItems = cartItems;
 
   final Map<ProductModel, int> _cartItems;
@@ -1335,10 +2013,12 @@ class _$_Initial implements _Initial {
   final DeliveryMethod? deliveryMethod;
   @override
   final bool withoutCoupon;
+  @override
+  final String? selectedTimeSlot;
 
   @override
   String toString() {
-    return 'BagTabState(cartItems: $cartItems, total: $total, itemCount: $itemCount, couponValue: $couponValue, deliveryMethod: $deliveryMethod, withoutCoupon: $withoutCoupon)';
+    return 'BagTabState(cartItems: $cartItems, total: $total, itemCount: $itemCount, couponValue: $couponValue, deliveryMethod: $deliveryMethod, withoutCoupon: $withoutCoupon, selectedTimeSlot: $selectedTimeSlot)';
   }
 
   @override
@@ -1356,7 +2036,9 @@ class _$_Initial implements _Initial {
             (identical(other.deliveryMethod, deliveryMethod) ||
                 other.deliveryMethod == deliveryMethod) &&
             (identical(other.withoutCoupon, withoutCoupon) ||
-                other.withoutCoupon == withoutCoupon));
+                other.withoutCoupon == withoutCoupon) &&
+            (identical(other.selectedTimeSlot, selectedTimeSlot) ||
+                other.selectedTimeSlot == selectedTimeSlot));
   }
 
   @override
@@ -1367,7 +2049,8 @@ class _$_Initial implements _Initial {
       itemCount,
       couponValue,
       deliveryMethod,
-      withoutCoupon);
+      withoutCoupon,
+      selectedTimeSlot);
 
   @JsonKey(ignore: true)
   @override
@@ -1383,7 +2066,8 @@ abstract class _Initial implements BagTabState {
       required final int itemCount,
       required final double? couponValue,
       required final DeliveryMethod? deliveryMethod,
-      required final bool withoutCoupon}) = _$_Initial;
+      required final bool withoutCoupon,
+      required final String? selectedTimeSlot}) = _$_Initial;
 
   @override
   Map<ProductModel, int> get cartItems;
@@ -1397,6 +2081,8 @@ abstract class _Initial implements BagTabState {
   DeliveryMethod? get deliveryMethod;
   @override
   bool get withoutCoupon;
+  @override
+  String? get selectedTimeSlot;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

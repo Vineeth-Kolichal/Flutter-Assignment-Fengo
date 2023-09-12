@@ -19,11 +19,20 @@ const kHeightTen = SizedBox(
 const kHeightTwenty = SizedBox(
   height: 20,
 );
+const kWidthFive = SizedBox(
+  width: 5,
+);
 const kBoldBlackTextStyle =
     TextStyle(color: Colors.black, fontWeight: FontWeight.w600);
 
 enum DeliveryMethod { homeDelivery, takeDelivery }
 
-enum TimeSlot{
+enum TimeSlot {
   time1,
 }
+
+const List<String> timeSlotList = [
+  "10 am to 12 pm",
+  "12 pm to 2 pm",
+  "2pm to 4 pm"
+];

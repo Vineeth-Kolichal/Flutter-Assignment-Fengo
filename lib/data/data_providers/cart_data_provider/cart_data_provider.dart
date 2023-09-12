@@ -1,4 +1,3 @@
-
 import 'package:flutter_assignment_fengo/data/data_providers/produts.dart';
 import 'package:flutter_assignment_fengo/data/models/product_model.dart';
 import 'package:flutter_assignment_fengo/data/repositories/cart_repo/cart_repo.dart';
@@ -7,8 +6,10 @@ class CartDataProvider implements CartRepo {
   static Map<ProductModel, int> cartItems = {};
   void initCart() {
     Products products = Products.fromJson(productJson);
+    int i = 1;
     for (ProductModel productModel in products.products) {
-      cartItems[productModel] = 2;
+      cartItems[productModel] = i;
+      i++;
     }
   }
 
