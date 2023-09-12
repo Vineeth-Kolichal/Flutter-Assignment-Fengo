@@ -32,9 +32,10 @@ class CouponChatSection extends StatelessWidget {
       },
       builder: (context, states) {
         if (states["total"] >= 300) {
+          context.read<CouponCubit>().getCoupons();
           return Column(
             children: [
-               ChatBubble(
+              ChatBubble(
                 isSender: false,
                 content: Row(
                   children: [

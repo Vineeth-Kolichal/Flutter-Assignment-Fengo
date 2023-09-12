@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
+import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bubble_chat_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'widgets/bag_tab_widgets/add_instructions_section.dart';
@@ -24,19 +25,20 @@ class BagTab extends StatelessWidget {
       context.read<BagTabBloc>().add(const GetAllCartItems());
     });
     Size size = MediaQuery.of(context).size;
-    List<Widget> bagChatItems = [
-      const PlaceOrderOrCancelButtons(),
-      const InstructionChat(),
-      const AddInstructionSection(),
-      const BillDetailsSectionChat(),
-      const SelectedTimeSlotWidget(),
-      const SelectTimeSlot(),
-      const SelectedDeliverymethod(),
-      const DeliveryMethodChat(),
-      const CouponAppliedChatWidget(),
-      const ProceedWithoutCoupon(),
-      const CouponChatSection(),
-      const CartChatWidget(),
+    List<Widget> bagChatItems = const [
+      PlaceOrderOrCancelButtons(),
+      InstructionResponse(),
+      InstructionChat(),
+      AddInstructionSection(),
+      BillDetailsSectionChat(),
+      SelectedTimeSlotWidget(),
+      SelectTimeSlot(),
+      SelectedDeliverymethod(),
+      DeliveryMethodChat(),
+      CouponAppliedChatWidget(),
+      ProceedWithoutCoupon(),
+      CouponChatSection(),
+      CartChatWidget(),
     ];
     return SizedBox(
       height: size.height,
@@ -65,15 +67,10 @@ class BagTab extends StatelessWidget {
                     child: Text('Cart is Empty'),
                   );
                 }
-                return ListView.separated(
+                return ListView.builder(
                   reverse: true,
                   itemBuilder: (context, index) {
                     return bagChatItems[index];
-                  },
-                  separatorBuilder: (context, index) {
-                    return const SizedBox(
-                      height: 5,
-                    );
                   },
                   itemCount: bagChatItems.length,
                 );
@@ -82,6 +79,33 @@ class BagTab extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class InstructionResponse extends StatelessWidget {
+  const InstructionResponse({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocSelector<BagTabBloc, BagTabState, bool>(
+      selector: (state) {
+        return state.instruction != null;
+      },
+      builder: (context, state) {
+        return Visibility(
+          visible: state,
+          child: const ChatBubble(
+              isSender: false,
+              content: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text("Your instruction has been shared to shop owner",
+                    style: TextStyle(fontSize: 16)),
+              )),
+        );
+      },
     );
   }
 }

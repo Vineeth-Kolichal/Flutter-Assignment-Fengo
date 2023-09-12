@@ -14,49 +14,46 @@ class AddInstructionSection extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return BlocSelector<BagTabBloc, BagTabState, bool>(
       selector: (state) {
-        return state.showInstructionTextField ;
+        return state.showInstructionTextField;
       },
       builder: (context, state) {
         return Visibility(
           visible: state,
-          child: SizedBox(
-            width: size.width,
-            child: Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: whiteBackgroundColor,
-                        borderRadius: BorderRadius.circular(30)),
-                    child: TextFormField(
-                      controller:
-                          context.read<BagTabBloc>().instructionController,
-                      decoration: InputDecoration(
-                          hintText: 'Add your instructions',
-                          contentPadding:
-                              const EdgeInsets.symmetric(horizontal: 20),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          )),
-                    ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: whiteBackgroundColor,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: TextFormField(
+                    controller:
+                        context.read<BagTabBloc>().instructionController,
+                    decoration: InputDecoration(
+                        hintText: 'Add your instructions',
+                        contentPadding:
+                            const EdgeInsets.symmetric(horizontal: 20),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        )),
                   ),
                 ),
-                kWidthFive,
-                InkWell(
-                  onTap: () {
-                    context.read<BagTabBloc>().add(AddInstructions(
-                        instruction: context
-                            .read<BagTabBloc>()
-                            .instructionController
-                            .text
-                            .trim()));
-                  },
-                  child: const CircleAvatar(
-                    child: Icon(Icons.send),
-                  ),
-                )
-              ],
-            ),
+              ),
+              kWidthFive,
+              InkWell(
+                onTap: () {
+                  context.read<BagTabBloc>().add(AddInstructions(
+                      instruction: context
+                          .read<BagTabBloc>()
+                          .instructionController
+                          .text
+                          .trim()));
+                },
+                child: const CircleAvatar(
+                  child: Icon(Icons.send),
+                ),
+              )
+            ],
           ),
         );
       },
