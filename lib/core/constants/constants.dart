@@ -34,5 +34,5 @@ enum TimeSlot {
 const List<String> timeSlotList = [
   "10 am to 12 pm",
   "12 pm to 2 pm",
-  "2pm to 4 pm"
+  "2 pm to 4 pm"
 ];
