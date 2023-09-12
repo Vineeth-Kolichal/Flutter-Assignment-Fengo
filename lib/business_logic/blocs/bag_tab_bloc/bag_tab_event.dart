@@ -15,4 +15,9 @@ class BagTabEvent with _$BagTabEvent {
       SelectTimeSlotEvent;
   const factory BagTabEvent.editDeliveryMethod() = EditDeliveryMethod;
   const factory BagTabEvent.editTimeSlot() = EditTimeSlot;
+  const factory BagTabEvent.showOrHideInstructionField({required bool show}) =
+      ShowOrHideInstructionField;
+  const factory BagTabEvent.addInstructions({required String instruction}) =
+      AddInstructions;
+  const factory BagTabEvent.showEditInstruction() = ShowEditInstruction;
 }

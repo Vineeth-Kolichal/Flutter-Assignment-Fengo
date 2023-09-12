@@ -121,26 +121,39 @@ class BillDetailsSectionChat extends StatelessWidget {
                     kHeightTen,
                     dottedLine,
                     kHeightTen,
-                    TextButton(
-                        onPressed: () {},
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Add Instructions',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  color: textBlackColor),
-                            ),
-                            Icon(
-                              Icons.add,
-                              size: 12,
-                              color: textBlackColor,
-                            )
-                          ],
-                        )),
-                    kHeightTen
+                    BlocSelector<BagTabBloc, BagTabState, bool>(
+                      selector: (state) {
+                        return state.instruction == null;
+                      },
+                      builder: (context, state) {
+                        return Visibility(
+                          visible: state,
+                          child: TextButton(
+                              onPressed: () {
+                                context.read<BagTabBloc>().add(
+                                    const ShowOrHideInstructionField(
+                                        show: true));
+                              },
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Add Instructions',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                        color: textBlackColor),
+                                  ),
+                                  Icon(
+                                    Icons.add,
+                                    size: 12,
+                                    color: textBlackColor,
+                                  )
+                                ],
+                              )),
+                        );
+                      },
+                    ),
                   ],
                 ),
               )),

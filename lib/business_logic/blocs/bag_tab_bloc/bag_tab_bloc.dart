@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/core/constants/constants.dart';
 import 'package:flutter_assignment_fengo/data/data_providers/cart_data_provider/cart_data_provider.dart';
 import 'package:flutter_assignment_fengo/data/models/product_model.dart';
@@ -12,6 +13,7 @@ part 'bag_tab_bloc.freezed.dart';
 
 class BagTabBloc extends Bloc<BagTabEvent, BagTabState> {
   CartRepo cartRepo = CartDataProvider();
+  TextEditingController instructionController = TextEditingController();
 
   BagTabBloc() : super(BagTabState.initial()) {
     //Get all cart items
@@ -76,5 +78,12 @@ class BagTabBloc extends Bloc<BagTabEvent, BagTabState> {
 
     on<EditTimeSlot>(
         (event, emit) => emit(state.copyWith(selectedTimeSlot: null)));
+
+    on<ShowOrHideInstructionField>(
+        (event, emit) => emit(state.copyWith(showInstructionTextField: true)));
+    on<AddInstructions>((event, emit) => emit(state.copyWith(
+        instruction: event.instruction, showInstructionTextField: false)));
+    on<ShowEditInstruction>((event, emit) => emit(
+        state.copyWith(instruction: null, showInstructionTextField: true)));
   }
 }

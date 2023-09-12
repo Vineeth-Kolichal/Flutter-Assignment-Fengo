@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment_fengo/business_logic/blocs/bag_tab_bloc/bag_tab_bloc.dart';
-import 'package:flutter_assignment_fengo/core/colors/colors.dart';
 import 'package:flutter_assignment_fengo/presentation/screens/home_screen/tabs/widgets/bag_tab_widgets/text_chat_content.dart';
-import 'package:flutter_assignment_fengo/presentation/screens/home_screen/widgets/bubble_chat_widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProceedWithoutCoupon extends StatelessWidget {

@@ -29,6 +29,9 @@ mixin _$BagTabEvent {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,6 +46,9 @@ mixin _$BagTabEvent {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +63,9 @@ mixin _$BagTabEvent {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,6 +81,10 @@ mixin _$BagTabEvent {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,6 +99,10 @@ mixin _$BagTabEvent {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +117,10 @@ mixin _$BagTabEvent {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -172,6 +193,9 @@ class _$GetAllCartItems implements GetAllCartItems {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return getAllCartItems();
   }
@@ -189,6 +213,9 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return getAllCartItems?.call();
   }
@@ -206,6 +233,9 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (getAllCartItems != null) {
@@ -227,6 +257,10 @@ class _$GetAllCartItems implements GetAllCartItems {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return getAllCartItems(this);
   }
@@ -244,6 +278,10 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return getAllCartItems?.call(this);
   }
@@ -261,6 +299,10 @@ class _$GetAllCartItems implements GetAllCartItems {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (getAllCartItems != null) {
@@ -350,6 +392,9 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return itemCountDecrement(id);
   }
@@ -367,6 +412,9 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return itemCountDecrement?.call(id);
   }
@@ -384,6 +432,9 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (itemCountDecrement != null) {
@@ -405,6 +456,10 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return itemCountDecrement(this);
   }
@@ -422,6 +477,10 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return itemCountDecrement?.call(this);
   }
@@ -439,6 +498,10 @@ class _$ItemCountDecrement implements ItemCountDecrement {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (itemCountDecrement != null) {
@@ -533,6 +596,9 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return itemCountIncrement(id);
   }
@@ -550,6 +616,9 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return itemCountIncrement?.call(id);
   }
@@ -567,6 +636,9 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (itemCountIncrement != null) {
@@ -588,6 +660,10 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return itemCountIncrement(this);
   }
@@ -605,6 +681,10 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return itemCountIncrement?.call(this);
   }
@@ -622,6 +702,10 @@ class _$ItemCountIncrement implements ItemCountIncrement {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (itemCountIncrement != null) {
@@ -715,6 +799,9 @@ class _$ApplyCoupon implements ApplyCoupon {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return applyCoupon(amount);
   }
@@ -732,6 +819,9 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return applyCoupon?.call(amount);
   }
@@ -749,6 +839,9 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (applyCoupon != null) {
@@ -770,6 +863,10 @@ class _$ApplyCoupon implements ApplyCoupon {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return applyCoupon(this);
   }
@@ -787,6 +884,10 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return applyCoupon?.call(this);
   }
@@ -804,6 +905,10 @@ class _$ApplyCoupon implements ApplyCoupon {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (applyCoupon != null) {
@@ -899,6 +1004,9 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return selectDeliveryMethod(deliveryMethod);
   }
@@ -916,6 +1024,9 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return selectDeliveryMethod?.call(deliveryMethod);
   }
@@ -933,6 +1044,9 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (selectDeliveryMethod != null) {
@@ -954,6 +1068,10 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return selectDeliveryMethod(this);
   }
@@ -971,6 +1089,10 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return selectDeliveryMethod?.call(this);
   }
@@ -988,6 +1110,10 @@ class _$SelectDeliverymethod implements SelectDeliverymethod {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (selectDeliveryMethod != null) {
@@ -1083,6 +1209,9 @@ class _$WithoutCoupon implements WithoutCoupon {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return withoutCoupon(this.withoutCoupon);
   }
@@ -1100,6 +1229,9 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return withoutCoupon?.call(this.withoutCoupon);
   }
@@ -1117,6 +1249,9 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (withoutCoupon != null) {
@@ -1138,6 +1273,10 @@ class _$WithoutCoupon implements WithoutCoupon {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return withoutCoupon(this);
   }
@@ -1155,6 +1294,10 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return withoutCoupon?.call(this);
   }
@@ -1172,6 +1315,10 @@ class _$WithoutCoupon implements WithoutCoupon {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (withoutCoupon != null) {
@@ -1240,6 +1387,9 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return setCouponNotApplied();
   }
@@ -1257,6 +1407,9 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return setCouponNotApplied?.call();
   }
@@ -1274,6 +1427,9 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (setCouponNotApplied != null) {
@@ -1295,6 +1451,10 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return setCouponNotApplied(this);
   }
@@ -1312,6 +1472,10 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return setCouponNotApplied?.call(this);
   }
@@ -1329,6 +1493,10 @@ class _$SetCouponNotApplied implements SetCouponNotApplied {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (setCouponNotApplied != null) {
@@ -1419,6 +1587,9 @@ class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return selectTimeSlotEvent(timeSlot);
   }
@@ -1436,6 +1607,9 @@ class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return selectTimeSlotEvent?.call(timeSlot);
   }
@@ -1453,6 +1627,9 @@ class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (selectTimeSlotEvent != null) {
@@ -1474,6 +1651,10 @@ class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return selectTimeSlotEvent(this);
   }
@@ -1491,6 +1672,10 @@ class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return selectTimeSlotEvent?.call(this);
   }
@@ -1508,6 +1693,10 @@ class _$SelectTimeSlotEvent implements SelectTimeSlotEvent {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (selectTimeSlotEvent != null) {
@@ -1576,6 +1765,9 @@ class _$EditDeliveryMethod implements EditDeliveryMethod {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return editDeliveryMethod();
   }
@@ -1593,6 +1785,9 @@ class _$EditDeliveryMethod implements EditDeliveryMethod {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return editDeliveryMethod?.call();
   }
@@ -1610,6 +1805,9 @@ class _$EditDeliveryMethod implements EditDeliveryMethod {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (editDeliveryMethod != null) {
@@ -1631,6 +1829,10 @@ class _$EditDeliveryMethod implements EditDeliveryMethod {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return editDeliveryMethod(this);
   }
@@ -1648,6 +1850,10 @@ class _$EditDeliveryMethod implements EditDeliveryMethod {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return editDeliveryMethod?.call(this);
   }
@@ -1665,6 +1871,10 @@ class _$EditDeliveryMethod implements EditDeliveryMethod {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (editDeliveryMethod != null) {
@@ -1727,6 +1937,9 @@ class _$EditTimeSlot implements EditTimeSlot {
     required TResult Function(String timeSlot) selectTimeSlotEvent,
     required TResult Function() editDeliveryMethod,
     required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
   }) {
     return editTimeSlot();
   }
@@ -1744,6 +1957,9 @@ class _$EditTimeSlot implements EditTimeSlot {
     TResult? Function(String timeSlot)? selectTimeSlotEvent,
     TResult? Function()? editDeliveryMethod,
     TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
   }) {
     return editTimeSlot?.call();
   }
@@ -1761,6 +1977,9 @@ class _$EditTimeSlot implements EditTimeSlot {
     TResult Function(String timeSlot)? selectTimeSlotEvent,
     TResult Function()? editDeliveryMethod,
     TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
     required TResult orElse(),
   }) {
     if (editTimeSlot != null) {
@@ -1782,6 +2001,10 @@ class _$EditTimeSlot implements EditTimeSlot {
     required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
     required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
     required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
   }) {
     return editTimeSlot(this);
   }
@@ -1799,6 +2022,10 @@ class _$EditTimeSlot implements EditTimeSlot {
     TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
   }) {
     return editTimeSlot?.call(this);
   }
@@ -1816,6 +2043,10 @@ class _$EditTimeSlot implements EditTimeSlot {
     TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
     TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
     TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
     required TResult orElse(),
   }) {
     if (editTimeSlot != null) {
@@ -1830,6 +2061,590 @@ abstract class EditTimeSlot implements BagTabEvent {
 }
 
 /// @nodoc
+abstract class _$$ShowOrHideInstructionFieldCopyWith<$Res> {
+  factory _$$ShowOrHideInstructionFieldCopyWith(
+          _$ShowOrHideInstructionField value,
+          $Res Function(_$ShowOrHideInstructionField) then) =
+      __$$ShowOrHideInstructionFieldCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool show});
+}
+
+/// @nodoc
+class __$$ShowOrHideInstructionFieldCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$ShowOrHideInstructionField>
+    implements _$$ShowOrHideInstructionFieldCopyWith<$Res> {
+  __$$ShowOrHideInstructionFieldCopyWithImpl(
+      _$ShowOrHideInstructionField _value,
+      $Res Function(_$ShowOrHideInstructionField) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? show = null,
+  }) {
+    return _then(_$ShowOrHideInstructionField(
+      show: null == show
+          ? _value.show
+          : show // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ShowOrHideInstructionField implements ShowOrHideInstructionField {
+  const _$ShowOrHideInstructionField({required this.show});
+
+  @override
+  final bool show;
+
+  @override
+  String toString() {
+    return 'BagTabEvent.showOrHideInstructionField(show: $show)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowOrHideInstructionField &&
+            (identical(other.show, show) || other.show == show));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, show);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowOrHideInstructionFieldCopyWith<_$ShowOrHideInstructionField>
+      get copyWith => __$$ShowOrHideInstructionFieldCopyWithImpl<
+          _$ShowOrHideInstructionField>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllCartItems,
+    required TResult Function(int id) itemCountDecrement,
+    required TResult Function(int id) itemCountIncrement,
+    required TResult Function(double amount) applyCoupon,
+    required TResult Function(DeliveryMethod deliveryMethod)
+        selectDeliveryMethod,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
+    required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
+  }) {
+    return showOrHideInstructionField(show);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getAllCartItems,
+    TResult? Function(int id)? itemCountDecrement,
+    TResult? Function(int id)? itemCountIncrement,
+    TResult? Function(double amount)? applyCoupon,
+    TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
+    TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
+  }) {
+    return showOrHideInstructionField?.call(show);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllCartItems,
+    TResult Function(int id)? itemCountDecrement,
+    TResult Function(int id)? itemCountIncrement,
+    TResult Function(double amount)? applyCoupon,
+    TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
+    TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
+    required TResult orElse(),
+  }) {
+    if (showOrHideInstructionField != null) {
+      return showOrHideInstructionField(show);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllCartItems value) getAllCartItems,
+    required TResult Function(ItemCountDecrement value) itemCountDecrement,
+    required TResult Function(ItemCountIncrement value) itemCountIncrement,
+    required TResult Function(ApplyCoupon value) applyCoupon,
+    required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
+    required TResult Function(WithoutCoupon value) withoutCoupon,
+    required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
+  }) {
+    return showOrHideInstructionField(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetAllCartItems value)? getAllCartItems,
+    TResult? Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult? Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
+    TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult? Function(WithoutCoupon value)? withoutCoupon,
+    TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
+  }) {
+    return showOrHideInstructionField?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllCartItems value)? getAllCartItems,
+    TResult Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult Function(ApplyCoupon value)? applyCoupon,
+    TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult Function(WithoutCoupon value)? withoutCoupon,
+    TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
+    required TResult orElse(),
+  }) {
+    if (showOrHideInstructionField != null) {
+      return showOrHideInstructionField(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShowOrHideInstructionField implements BagTabEvent {
+  const factory ShowOrHideInstructionField({required final bool show}) =
+      _$ShowOrHideInstructionField;
+
+  bool get show;
+  @JsonKey(ignore: true)
+  _$$ShowOrHideInstructionFieldCopyWith<_$ShowOrHideInstructionField>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddInstructionsCopyWith<$Res> {
+  factory _$$AddInstructionsCopyWith(
+          _$AddInstructions value, $Res Function(_$AddInstructions) then) =
+      __$$AddInstructionsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String instruction});
+}
+
+/// @nodoc
+class __$$AddInstructionsCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$AddInstructions>
+    implements _$$AddInstructionsCopyWith<$Res> {
+  __$$AddInstructionsCopyWithImpl(
+      _$AddInstructions _value, $Res Function(_$AddInstructions) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? instruction = null,
+  }) {
+    return _then(_$AddInstructions(
+      instruction: null == instruction
+          ? _value.instruction
+          : instruction // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddInstructions implements AddInstructions {
+  const _$AddInstructions({required this.instruction});
+
+  @override
+  final String instruction;
+
+  @override
+  String toString() {
+    return 'BagTabEvent.addInstructions(instruction: $instruction)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddInstructions &&
+            (identical(other.instruction, instruction) ||
+                other.instruction == instruction));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, instruction);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddInstructionsCopyWith<_$AddInstructions> get copyWith =>
+      __$$AddInstructionsCopyWithImpl<_$AddInstructions>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllCartItems,
+    required TResult Function(int id) itemCountDecrement,
+    required TResult Function(int id) itemCountIncrement,
+    required TResult Function(double amount) applyCoupon,
+    required TResult Function(DeliveryMethod deliveryMethod)
+        selectDeliveryMethod,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
+    required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
+  }) {
+    return addInstructions(instruction);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getAllCartItems,
+    TResult? Function(int id)? itemCountDecrement,
+    TResult? Function(int id)? itemCountIncrement,
+    TResult? Function(double amount)? applyCoupon,
+    TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
+    TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
+  }) {
+    return addInstructions?.call(instruction);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllCartItems,
+    TResult Function(int id)? itemCountDecrement,
+    TResult Function(int id)? itemCountIncrement,
+    TResult Function(double amount)? applyCoupon,
+    TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
+    TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
+    required TResult orElse(),
+  }) {
+    if (addInstructions != null) {
+      return addInstructions(instruction);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllCartItems value) getAllCartItems,
+    required TResult Function(ItemCountDecrement value) itemCountDecrement,
+    required TResult Function(ItemCountIncrement value) itemCountIncrement,
+    required TResult Function(ApplyCoupon value) applyCoupon,
+    required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
+    required TResult Function(WithoutCoupon value) withoutCoupon,
+    required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
+  }) {
+    return addInstructions(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetAllCartItems value)? getAllCartItems,
+    TResult? Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult? Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
+    TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult? Function(WithoutCoupon value)? withoutCoupon,
+    TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
+  }) {
+    return addInstructions?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllCartItems value)? getAllCartItems,
+    TResult Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult Function(ApplyCoupon value)? applyCoupon,
+    TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult Function(WithoutCoupon value)? withoutCoupon,
+    TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
+    required TResult orElse(),
+  }) {
+    if (addInstructions != null) {
+      return addInstructions(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddInstructions implements BagTabEvent {
+  const factory AddInstructions({required final String instruction}) =
+      _$AddInstructions;
+
+  String get instruction;
+  @JsonKey(ignore: true)
+  _$$AddInstructionsCopyWith<_$AddInstructions> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShowEditInstructionCopyWith<$Res> {
+  factory _$$ShowEditInstructionCopyWith(_$ShowEditInstruction value,
+          $Res Function(_$ShowEditInstruction) then) =
+      __$$ShowEditInstructionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ShowEditInstructionCopyWithImpl<$Res>
+    extends _$BagTabEventCopyWithImpl<$Res, _$ShowEditInstruction>
+    implements _$$ShowEditInstructionCopyWith<$Res> {
+  __$$ShowEditInstructionCopyWithImpl(
+      _$ShowEditInstruction _value, $Res Function(_$ShowEditInstruction) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ShowEditInstruction implements ShowEditInstruction {
+  const _$ShowEditInstruction();
+
+  @override
+  String toString() {
+    return 'BagTabEvent.showEditInstruction()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ShowEditInstruction);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAllCartItems,
+    required TResult Function(int id) itemCountDecrement,
+    required TResult Function(int id) itemCountIncrement,
+    required TResult Function(double amount) applyCoupon,
+    required TResult Function(DeliveryMethod deliveryMethod)
+        selectDeliveryMethod,
+    required TResult Function(bool withoutCoupon) withoutCoupon,
+    required TResult Function() setCouponNotApplied,
+    required TResult Function(String timeSlot) selectTimeSlotEvent,
+    required TResult Function() editDeliveryMethod,
+    required TResult Function() editTimeSlot,
+    required TResult Function(bool show) showOrHideInstructionField,
+    required TResult Function(String instruction) addInstructions,
+    required TResult Function() showEditInstruction,
+  }) {
+    return showEditInstruction();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getAllCartItems,
+    TResult? Function(int id)? itemCountDecrement,
+    TResult? Function(int id)? itemCountIncrement,
+    TResult? Function(double amount)? applyCoupon,
+    TResult? Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult? Function(bool withoutCoupon)? withoutCoupon,
+    TResult? Function()? setCouponNotApplied,
+    TResult? Function(String timeSlot)? selectTimeSlotEvent,
+    TResult? Function()? editDeliveryMethod,
+    TResult? Function()? editTimeSlot,
+    TResult? Function(bool show)? showOrHideInstructionField,
+    TResult? Function(String instruction)? addInstructions,
+    TResult? Function()? showEditInstruction,
+  }) {
+    return showEditInstruction?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAllCartItems,
+    TResult Function(int id)? itemCountDecrement,
+    TResult Function(int id)? itemCountIncrement,
+    TResult Function(double amount)? applyCoupon,
+    TResult Function(DeliveryMethod deliveryMethod)? selectDeliveryMethod,
+    TResult Function(bool withoutCoupon)? withoutCoupon,
+    TResult Function()? setCouponNotApplied,
+    TResult Function(String timeSlot)? selectTimeSlotEvent,
+    TResult Function()? editDeliveryMethod,
+    TResult Function()? editTimeSlot,
+    TResult Function(bool show)? showOrHideInstructionField,
+    TResult Function(String instruction)? addInstructions,
+    TResult Function()? showEditInstruction,
+    required TResult orElse(),
+  }) {
+    if (showEditInstruction != null) {
+      return showEditInstruction();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAllCartItems value) getAllCartItems,
+    required TResult Function(ItemCountDecrement value) itemCountDecrement,
+    required TResult Function(ItemCountIncrement value) itemCountIncrement,
+    required TResult Function(ApplyCoupon value) applyCoupon,
+    required TResult Function(SelectDeliverymethod value) selectDeliveryMethod,
+    required TResult Function(WithoutCoupon value) withoutCoupon,
+    required TResult Function(SetCouponNotApplied value) setCouponNotApplied,
+    required TResult Function(SelectTimeSlotEvent value) selectTimeSlotEvent,
+    required TResult Function(EditDeliveryMethod value) editDeliveryMethod,
+    required TResult Function(EditTimeSlot value) editTimeSlot,
+    required TResult Function(ShowOrHideInstructionField value)
+        showOrHideInstructionField,
+    required TResult Function(AddInstructions value) addInstructions,
+    required TResult Function(ShowEditInstruction value) showEditInstruction,
+  }) {
+    return showEditInstruction(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(GetAllCartItems value)? getAllCartItems,
+    TResult? Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult? Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult? Function(ApplyCoupon value)? applyCoupon,
+    TResult? Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult? Function(WithoutCoupon value)? withoutCoupon,
+    TResult? Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult? Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult? Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult? Function(EditTimeSlot value)? editTimeSlot,
+    TResult? Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult? Function(AddInstructions value)? addInstructions,
+    TResult? Function(ShowEditInstruction value)? showEditInstruction,
+  }) {
+    return showEditInstruction?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAllCartItems value)? getAllCartItems,
+    TResult Function(ItemCountDecrement value)? itemCountDecrement,
+    TResult Function(ItemCountIncrement value)? itemCountIncrement,
+    TResult Function(ApplyCoupon value)? applyCoupon,
+    TResult Function(SelectDeliverymethod value)? selectDeliveryMethod,
+    TResult Function(WithoutCoupon value)? withoutCoupon,
+    TResult Function(SetCouponNotApplied value)? setCouponNotApplied,
+    TResult Function(SelectTimeSlotEvent value)? selectTimeSlotEvent,
+    TResult Function(EditDeliveryMethod value)? editDeliveryMethod,
+    TResult Function(EditTimeSlot value)? editTimeSlot,
+    TResult Function(ShowOrHideInstructionField value)?
+        showOrHideInstructionField,
+    TResult Function(AddInstructions value)? addInstructions,
+    TResult Function(ShowEditInstruction value)? showEditInstruction,
+    required TResult orElse(),
+  }) {
+    if (showEditInstruction != null) {
+      return showEditInstruction(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShowEditInstruction implements BagTabEvent {
+  const factory ShowEditInstruction() = _$ShowEditInstruction;
+}
+
+/// @nodoc
 mixin _$BagTabState {
   Map<ProductModel, int> get cartItems => throw _privateConstructorUsedError;
   double get total => throw _privateConstructorUsedError;
@@ -1838,6 +2653,8 @@ mixin _$BagTabState {
   DeliveryMethod? get deliveryMethod => throw _privateConstructorUsedError;
   bool get withoutCoupon => throw _privateConstructorUsedError;
   String? get selectedTimeSlot => throw _privateConstructorUsedError;
+  bool get showInstructionTextField => throw _privateConstructorUsedError;
+  String? get instruction => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $BagTabStateCopyWith<BagTabState> get copyWith =>
@@ -1857,7 +2674,9 @@ abstract class $BagTabStateCopyWith<$Res> {
       double? couponValue,
       DeliveryMethod? deliveryMethod,
       bool withoutCoupon,
-      String? selectedTimeSlot});
+      String? selectedTimeSlot,
+      bool showInstructionTextField,
+      String? instruction});
 }
 
 /// @nodoc
@@ -1880,6 +2699,8 @@ class _$BagTabStateCopyWithImpl<$Res, $Val extends BagTabState>
     Object? deliveryMethod = freezed,
     Object? withoutCoupon = null,
     Object? selectedTimeSlot = freezed,
+    Object? showInstructionTextField = null,
+    Object? instruction = freezed,
   }) {
     return _then(_value.copyWith(
       cartItems: null == cartItems
@@ -1910,6 +2731,14 @@ class _$BagTabStateCopyWithImpl<$Res, $Val extends BagTabState>
           ? _value.selectedTimeSlot
           : selectedTimeSlot // ignore: cast_nullable_to_non_nullable
               as String?,
+      showInstructionTextField: null == showInstructionTextField
+          ? _value.showInstructionTextField
+          : showInstructionTextField // ignore: cast_nullable_to_non_nullable
+              as bool,
+      instruction: freezed == instruction
+          ? _value.instruction
+          : instruction // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -1928,7 +2757,9 @@ abstract class _$$_InitialCopyWith<$Res> implements $BagTabStateCopyWith<$Res> {
       double? couponValue,
       DeliveryMethod? deliveryMethod,
       bool withoutCoupon,
-      String? selectedTimeSlot});
+      String? selectedTimeSlot,
+      bool showInstructionTextField,
+      String? instruction});
 }
 
 /// @nodoc
@@ -1948,6 +2779,8 @@ class __$$_InitialCopyWithImpl<$Res>
     Object? deliveryMethod = freezed,
     Object? withoutCoupon = null,
     Object? selectedTimeSlot = freezed,
+    Object? showInstructionTextField = null,
+    Object? instruction = freezed,
   }) {
     return _then(_$_Initial(
       cartItems: null == cartItems
@@ -1978,6 +2811,14 @@ class __$$_InitialCopyWithImpl<$Res>
           ? _value.selectedTimeSlot
           : selectedTimeSlot // ignore: cast_nullable_to_non_nullable
               as String?,
+      showInstructionTextField: null == showInstructionTextField
+          ? _value.showInstructionTextField
+          : showInstructionTextField // ignore: cast_nullable_to_non_nullable
+              as bool,
+      instruction: freezed == instruction
+          ? _value.instruction
+          : instruction // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1992,7 +2833,9 @@ class _$_Initial implements _Initial {
       required this.couponValue,
       required this.deliveryMethod,
       required this.withoutCoupon,
-      required this.selectedTimeSlot})
+      required this.selectedTimeSlot,
+      required this.showInstructionTextField,
+      required this.instruction})
       : _cartItems = cartItems;
 
   final Map<ProductModel, int> _cartItems;
@@ -2015,10 +2858,14 @@ class _$_Initial implements _Initial {
   final bool withoutCoupon;
   @override
   final String? selectedTimeSlot;
+  @override
+  final bool showInstructionTextField;
+  @override
+  final String? instruction;
 
   @override
   String toString() {
-    return 'BagTabState(cartItems: $cartItems, total: $total, itemCount: $itemCount, couponValue: $couponValue, deliveryMethod: $deliveryMethod, withoutCoupon: $withoutCoupon, selectedTimeSlot: $selectedTimeSlot)';
+    return 'BagTabState(cartItems: $cartItems, total: $total, itemCount: $itemCount, couponValue: $couponValue, deliveryMethod: $deliveryMethod, withoutCoupon: $withoutCoupon, selectedTimeSlot: $selectedTimeSlot, showInstructionTextField: $showInstructionTextField, instruction: $instruction)';
   }
 
   @override
@@ -2038,7 +2885,12 @@ class _$_Initial implements _Initial {
             (identical(other.withoutCoupon, withoutCoupon) ||
                 other.withoutCoupon == withoutCoupon) &&
             (identical(other.selectedTimeSlot, selectedTimeSlot) ||
-                other.selectedTimeSlot == selectedTimeSlot));
+                other.selectedTimeSlot == selectedTimeSlot) &&
+            (identical(
+                    other.showInstructionTextField, showInstructionTextField) ||
+                other.showInstructionTextField == showInstructionTextField) &&
+            (identical(other.instruction, instruction) ||
+                other.instruction == instruction));
   }
 
   @override
@@ -2050,7 +2902,9 @@ class _$_Initial implements _Initial {
       couponValue,
       deliveryMethod,
       withoutCoupon,
-      selectedTimeSlot);
+      selectedTimeSlot,
+      showInstructionTextField,
+      instruction);
 
   @JsonKey(ignore: true)
   @override
@@ -2067,7 +2921,9 @@ abstract class _Initial implements BagTabState {
       required final double? couponValue,
       required final DeliveryMethod? deliveryMethod,
       required final bool withoutCoupon,
-      required final String? selectedTimeSlot}) = _$_Initial;
+      required final String? selectedTimeSlot,
+      required final bool showInstructionTextField,
+      required final String? instruction}) = _$_Initial;
 
   @override
   Map<ProductModel, int> get cartItems;
@@ -2083,6 +2939,10 @@ abstract class _Initial implements BagTabState {
   bool get withoutCoupon;
   @override
   String? get selectedTimeSlot;
+  @override
+  bool get showInstructionTextField;
+  @override
+  String? get instruction;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

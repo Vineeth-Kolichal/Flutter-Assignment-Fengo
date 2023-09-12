@@ -10,6 +10,8 @@ class BagTabState with _$BagTabState {
     required DeliveryMethod? deliveryMethod,
     required bool withoutCoupon,
     required String? selectedTimeSlot,
+    required bool showInstructionTextField,
+    required String? instruction
   }) = _Initial;
 
   //Set initial value of each state
@@ -21,5 +23,7 @@ class BagTabState with _$BagTabState {
         itemCount: 0,
         total: 0,
         selectedTimeSlot: null,
+        showInstructionTextField: false,
+        instruction: null,
       );
 }
